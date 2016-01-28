@@ -35,7 +35,8 @@ class JumpServer(object):
         print x
 
     def display_server(self,group_id):
-        server_query_set = self.models.Server.objects.filter(server_group_id = group_id)
+        #server_query_set = self.models.Server.objects.filter(server_group_id = group_id)
+        server_query_set = self.models.ServerGroup.objects.get(id=group_id).servers.all()
         self.server_dic = {}
         x = PrettyTable(["Id","ServerName","IpAddress" ,"Port"])
         for i,s in enumerate(server_query_set):
@@ -47,8 +48,15 @@ class JumpServer(object):
     def auth(self):
         username_list = self.models.OsUser.objects.values_list('username',flat=True)
         if self.username not in username_list:
-            raw_input( '''You don't have permission to login to this jumpserver ''')
-            sys.exit(1)
+            try:
+
+                raw_input( '''You don't have permission to login to this jumpserver ''')
+                sys.exit(1)
+            except Exception , e:
+                sys.exit(1)
+                logging.info(str(e))
+            finally:
+                sys.exit(1)
         else:
             self.user = self.models.OsUser.objects.get(username = self.username)
 

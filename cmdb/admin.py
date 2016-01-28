@@ -23,12 +23,12 @@ class BackupAdmin(admin.ModelAdmin):
 #    list_filter = ('operation','username','happened_time')
     list_filter = ('app__app_name','backup_time')
 class ServerAdmin(admin.ModelAdmin):
-    def get_group_name(self,obj):
-        if obj.server_group:
-            return obj.server_group.group_name
-        else:
-            return 'not in any group'
-    list_display = ('id','server_name','ipaddr','port','username','password','get_group_name')
+ #   def get_group_name(self,obj):
+  #      if obj.server_group:
+   #         return obj.server_group.group_name
+    #    else:
+     #       return 'not in any group'
+    list_display = ('id','server_name','ipaddr','port','username','password')
 #    list_filter = ('operation','username','happened_time')
     search_fields = ('server_name','ipaddr')
 

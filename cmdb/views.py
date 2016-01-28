@@ -234,7 +234,8 @@ def cmdb_main(request):
             server_name = request.GET.get('server_name')
             if group_name:
                 if len(group_name) != 0:
-                    cmdb_server_list = cmdb_server_list.filter(server_group__group_name = group_name.strip() )
+                    #cmdb_server_list = cmdb_server_list.filter(server_group__group_name = group_name.strip() )
+                    cmdb_server_list = models.ServerGroup.objects.get(group_name=group_name).servers.all()
             if server_name:
                 if len(server_name) != 0:
                     cmdb_server_list = cmdb_server_list.filter(server_name__istartswith = server_name.strip() )

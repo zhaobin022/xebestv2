@@ -20,6 +20,7 @@ class App(models.Model):
 
 class ServerGroup(models.Model):
     group_name =  models.CharField(max_length=30,unique=True)
+    servers  =  models.ManyToManyField('Server',null=True,blank=True)
     description = models.TextField()
     def __unicode__(self):
         return self.group_name
@@ -39,13 +40,11 @@ class Server(models.Model):
     publish_date = models.DateTimeField(blank=True,null=True)
     rollbackup_status = models.CharField(max_length=30,null=True,blank=True)
     task =  models.ForeignKey('TaskLog',null=True,blank=True)
-    server_group =  models.ForeignKey('ServerGroup',null=True,blank=True)
     ssh_check_status = (
         (0, 'Successfull'),
         (1, 'Failed'),
     )
     ssh_check =  models.IntegerField(choices=ssh_check_status,blank=True,null=True,default=1)
-    server_group =  models.ForeignKey('ServerGroup',null=True,blank=True)
     change_password_status = (
         (0, 'Successfull'),
         (1, 'Failed'),
