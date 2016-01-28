@@ -1,0 +1,525 @@
+{% extends "index.html" %}
+
+
+{% block rightcontent %}
+    <div class="content setfont">
+
+        <div class="header">
+            <h1 class="page-title setfont">Server List</h1>
+        </div>
+        <ul class="breadcrumb">
+            <li class="active" ><a href="/">App</a> <span class="divider">/</span></li>
+            <li >Server<span class="divider">/</span></li>
+            <li ><a href="/backuplist/?app_id={{ app.id }}">Backup<span class="divider">/</span></a></li>
+            <li ><a href="/loglist/?app_id={{ app.id }}">Loginfo </a></li>
+        </ul>
+        <div class="block">
+                <p class="block-heading setfont" style="font-size: 15px;">{{ app.app_name | capfirst  }} Detail</p>
+                <div class="block-body" style="display: block;margin: 0;padding: 0 0 15px 18px;background-color: #f5f5f5;font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;">
+                    <h2 id="task_id" style="margin: 0;padding: 0;line-height: 2">Task Id : {{ app.task.id }}</h2>
+                <!--
+                <a href="#myModal" role="button" class="btn" data-toggle="modal">查看演示案例</a>
+                -->
+
+                    <h4 style="margin: 0;padding: 0;line-height: 2">Upload Path : <a class="f_codeNum" href="#display_dir_content"  data-toggle="modal" onclick='input_dir_content("upload_path_detail","{{ app.upload_path }}")' >{{ app.upload_path }} </a></h4>
+                    <h4 style="margin: 0;padding: 0;line-height: 2">App Path : {{ app.app_path }}</h4>
+                    <h4 style="margin: 0;padding: 0;line-height: 2">Backup Path : <a class="f_codeNum" href="#display_dir_content"  data-toggle="modal" onclick='input_dir_content("backup_path_detail","{{ app.backup_path }}")' >{{ app.backup_path }} </a></h4>
+                    <h4 style="margin: 0;padding: 0;line-height: 2">Start Script : {{ app.start_script_path }}</h4>
+                    <h4 style="margin: 0;padding: 0;line-height: 2">Stop Script : {{ app.stop_script_path }}</h4>
+                    <h4 id="publish_date" style="margin: 0;padding: 0;line-height: 2">Publish Date : {{ app.publish_date | date:'Y-m-d H:i:s' }}</h4>
+                    <h4 style="margin: 0;padding: 0;line-height: 2">RollbackStatus : {{ app.rollback_status }}</h4>
+                    {% if app.war_file %}
+                            <h4 style="margin: 0;padding: 0;line-height: 2">War File Path :  <a class="f_codeNum" href="#display_dir_content"  data-toggle="modal" onclick='input_dir_content("war_file_path","{{ app.war_file_path }}")' >{{ app.war_file_path }} </a></h4>
+                    {% endif %}
+                </div>
+        </div>
+
+        <div class="container-fluid">
+
+            <div class="row-fluid">
+                      <div class="row-fluid">
+                        <div class="btn-toolbar">
+                            <a href="#actionModal" onclick="setModal('publish_all')" data-toggle="modal" class="btn btn-primary"> Publish All</a>
+                            <a href="#actionModal" onclick="setModal('startup_all')" data-toggle="modal" class="btn btn-primary"> Startup All</a>
+                            <a href="#actionModal" onclick="setModal('shutdown_all')" data-toggle="modal" class="btn btn-primary">Shutdown All</a>
+                            <a href="#actionModal" onclick="setModal('check_all')" data-toggle="modal" class="btn btn-primary"> Check All</a>
+                            <a href="#actionModal" onclick="setModal('publish_selected')" data-toggle="modal" class="btn btn-primary"> Publish The Selected</a>
+                            <a href="#actionModal" onclick="setModal('startup_selected')" data-toggle="modal" class="btn btn-primary"> Startup The Selected</a>
+                            <a href="#actionModal" onclick="setModal('shutdown_selected')" data-toggle="modal" class="btn btn-primary"> Shutdown The Selected</a>
+                        </div>
+                        <div class="well">
+                            <table class="table setfont"　id="server_list">
+                              <thead>
+                                <tr>
+                                  <th><input id="selectAll" type="checkbox"/></th>
+                                  <th>ServerName</th>
+                                  <th>Ipaddress</th>
+                                  <th>AppStatus</th>
+                                  <th >LastPublishDate</th>
+                                  <th >RollbackStatus</th>
+                                   <th >LastTaskId</th>
+                                </tr>
+                              </thead>
+                              <tbody id="server_list_body">
+                             {% for s in page_objects %}
+                                <tr>
+                                  <td><input name="checkbox_list" type="checkbox" value="{{ s.id }}"/></td>
+                                  <td>{{ s.server_name }}</td>
+                                  <td>{{ s.ipaddr}}</td>
+
+                                    {% if s.app_status %}
+                                      <td style="text-align:center;color: green" >
+                                        ONLINE
+                                     </td>
+                                        {% else %}
+                                        <td style="text-align:center;color:red;color: red">
+                                        OFFLINE
+                                        </td>
+                                    {% endif %}
+                                </td>
+                                   {% if  s.publish_date %}
+                                      <td>{{ s.publish_date | date:'Y-m-d H:i:s' }}</td>
+                                    {% else %}
+                                           <td></td>
+                                    {% endif %}
+                                  <td>{{ s.rollbackup_status }}</td>
+                                  {% if  s.task %}
+                                        <td>{{ s.task.id }}</td>
+                                {% else %}
+                                     <td></td>
+                                {% endif %}
+                                </tr>
+                              {% endfor %}
+
+                              </tbody>
+                            </table>
+                            {% if page_range|length != 1 %}
+                             <div class="pagination">
+
+
+                                             <ul>
+                                        {% if page_objects.has_previous %}
+                                               <li><a  href="/server/list/?app_id={{ app.id }}&page={{ page_objects.previous_page_number }}">Prev</a></li>
+                                        {% endif %}
+
+                                        {% for p in page_range %}
+
+                                            {% ifequal p page_objects.number %}
+                                                 <li class="active"><a href="/server/list/?app_id={{ app.id }}&page={{p}}">{{ p }}</a></li>
+                                            {% else %}
+                                                 <li ><a href="/server/list/?app_id={{ app.id }}&page={{p}}">{{ p }}</a></li>
+                                             {% endifequal %}
+                                        {% endfor %}
+
+                                        {% if page_objects.has_next %}
+                                            <li><a href="/server/list/?app_id={{ app.id }}&page={{page_objects.next_page_number}}">Next</a></li>
+
+                                        {% endif %}
+
+                                          </ul>
+
+                            </div>
+                           {% endif %}
+
+                        </div>
+
+
+              <div id="process_bar" class="progress">
+              <div  class="bar" style="width: 0%"><span class="sr-only">0% Complete</span></div>
+            </div>
+             <div class="block">
+                        <a href="#page-stats" class="block-heading" data-toggle="collapse">Results</a>
+                        <pre id="page-stats" class="block-body collapse in" style="display: none;margin:0;">
+                         </pre>
+            </div>
+                      <!--
+
+
+-->
+                           <!--confirm modal-->
+                        <div class="modal small hide fade" id="actionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h3 id="actionModalLabel"></h3>
+                            </div>
+                            <div class="modal-body">
+                                <p class="error-text"><i class="icon-warning-sign modal-icon"></i><div id="actionMoalMessage"></div></p>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                                <button id="actionModalButton" class="btn btn-danger" data-dismiss="modal" onclick="submitAction()"></button>
+                            </div>
+                        </div>
+
+            <!-- Modal -->
+                                <div id="backupModal"  class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                  <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                    <h3 id="myModalLabel">Backup List</h3>
+                                  </div>
+                                  <div class="modal-body">
+                                                <table class="table setfont"　id="backup_list" style="margin-left: 28px;">
+                                                  <thead>
+                                                    <tr>
+                                                      <th>Backup Name</th>
+                                                      <th>Backup Time</th>
+                                                      <th>Operation</th>
+                                                    </tr>
+                                                  </thead>
+                                                  <tbody id="server_list_body">
+                                                    <tr>
+                                                      <td>2016-09-11</td>
+                                                      <td>2016-09-11</td>
+                                                      <td class="btn btn-primary">Rollback</td>
+                                                    </tr>
+                                                  </tbody>
+                                                </table>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+                                  </div>
+                                </div>
+            </div>
+                    <footer>
+                        <hr>
+
+
+
+                        <p>&copy; 2016 <a href="#" target="_blank">xebest</a></p>
+                    </footer>
+
+            </div>
+        </div>
+    </div>
+
+ {% endblock %}
+{% block javascripts  %}
+
+            postDic = {
+                    'action_type':'',
+            }
+            // Set Modal value
+            function setModal(action_type) {
+                $("#page-stats").css('display','none');
+                  $('#actionModalButton').removeAttr("disabled");
+                 $('#process_bar').html('<div  class="bar" style="width: 0%"><span class="sr-only">0% Complete</span></div>')
+                if (action_type == 'publish_all') {
+                    $('#actionModalLabel').html("Publish All App");
+                    $('#actionMoalMessage').html("Are you sure you want to publish to all servers ?");
+                    $('#actionModalButton').html("PublishAll");
+                    postDic = {
+                            'action_type':'publish_all',
+                            'app_id':{{ app.id }},
+                    }
+                } else if (action_type == 'startup_all') {
+                    $('#actionModalLabel').html("Stratup All App");
+                    $('#actionMoalMessage').html("Are you sure you want to startup  all servers ?");
+                    $('#actionModalButton').html("StatupAll");
+                    postDic = {
+                            'action_type':'startup_all',
+                            'app_id':{{ app.id }},
+                    }
+                } else if (action_type == 'check_all') {
+                    $('#actionModalLabel').html("Check All App");
+                    $('#actionMoalMessage').html("Are you sure you want to check to all servers ?");
+                    $('#actionModalButton').html("CheckAll");
+                    postDic = {
+                            'action_type':'check_all',
+                            'app_id':{{ app.id }},
+                    }
+                } else if (action_type == 'shutdown_all') {
+                    $('#actionModalLabel').html("Shutdown All App");
+                    $('#actionMoalMessage').html("Are you sure you want to shutdown all servers ?");
+                    $('#actionModalButton').html("ShutdownAll");
+                    postDic = {
+                            'action_type':'shutdown_all',
+                            'app_id':{{ app.id }},
+                    }
+                } else if (action_type == 'publish_selected') {
+                    $('#actionModalLabel').html("Publish Selected App");
+                    $('#actionMoalMessage').html("Are you sure you want to publish  selected  servers ?");
+                    $('#actionModalButton').html("PublishSelected");
+                    var selected_servers  = $("input[name='checkbox_list']:checked");
+                    var server_ids = new Array();
+                    $(selected_servers).each(function(i){
+                       var id = this.value;
+                        server_ids.push(id);
+                     });
+                    if (server_ids.length == 0) {
+                          $('#actionMoalMessage').html("You must select some servers ?");
+                           $('#actionModalButton').prop('disabled',"true");
+
+                    }
+                    postDic = {
+                            'action_type':'publish_selected',
+                            'app_id':{{ app.id }},
+                            'server_ids':server_ids,
+                    }
+                } else if (action_type == 'startup_selected') {
+                    $('#actionModalLabel').html("Startup Selected App");
+                    $('#actionMoalMessage').html("Are you sure you want to startup  selected  servers ?");
+                    $('#actionModalButton').html("StartupSelected");
+                    var selected_servers  = $("input[name='checkbox_list']:checked");
+                    var server_ids = new Array();
+                    $(selected_servers).each(function(i){
+                       var id = this.value;
+                        server_ids.push(id);
+                     });
+                    if (server_ids.length == 0) {
+                          $('#actionMoalMessage').html("You must select some servers ?");
+                           $('#actionModalButton').prop('disabled',"true");
+
+                    }
+                    postDic = {
+                            'action_type':'startup_selected',
+                            'app_id':{{ app.id }},
+                            'server_ids':server_ids,
+                    }
+                } else if (action_type == 'shutdown_selected') {
+                    $('#actionModalLabel').html("Shutdown Selected App");
+                    $('#actionMoalMessage').html("Are you sure you want to shutdown  selected  servers ?");
+                    $('#actionModalButton').html("ShutdownSelected");
+                    var selected_servers  = $("input[name='checkbox_list']:checked");
+                    var server_ids = new Array();
+                    $(selected_servers).each(function(i){
+                       var id = this.value;
+                        server_ids.push(id);
+                     });
+                    if (server_ids.length == 0) {
+                          $('#actionMoalMessage').html("You must select some servers ?");
+                           $('#actionModalButton').prop('disabled',"true");
+
+                    }
+                    postDic = {
+                            'action_type':'shutdown_selected',
+                            'app_id':{{ app.id }},
+                            'server_ids':server_ids,
+                    }
+                };
+            };
+
+            //Submit Action
+            function submitAction() {
+                var post_url = "{% url 'main_api' %}"
+                /*
+                if ( postDic.action_type == 'publish_selected' ||  postDic.action_type == 'startup_selected'  ||  postDic.action_type == 'shutdown_selected')
+                {
+                    if ( postDic.server_ids.length == 0 ) {
+                      //  alert('You must select some servers !');
+                        return false
+                    }
+                    var temp_post_dic = {
+                        'action_type':'gen_task_log',
+                        'app_id':{{ app.id }},
+                        'selected': true,
+                        'server_ids':postDic.server_ids
+                    };
+                }
+                else
+                {
+                    var temp_post_dic = {
+                        'action_type':'gen_task_log',
+                        'app_id':{{ app.id }},
+                         'selected': false,
+                    };
+                };
+                task_type_list = (
+                    (0, 'Publish'),
+                    (1, 'Backup'),
+                    (2, 'Rollback'),
+                    (3, 'Startup'),
+                    (4, 'Shutdown'),
+                    (5, 'DeleteBackup'),
+                    (6, 'UnzipWar'),
+                    (7, 'CheckApp'),
+                )
+
+                */
+                if (postDic.action_type == 'publish_all') {
+                     var task_type = 0;
+                     var selected = false;
+                } else if (postDic.action_type == 'startup_all') {
+                     var task_type = 3;
+                     var selected = false;
+                } else if (postDic.action_type == 'check_all') {
+                     var task_type = 7;
+                     var selected = false;
+                } else if (postDic.action_type == 'shutdown_all') {
+                     var task_type = 4;
+                     var selected = false;
+                } else if ( postDic.action_type == 'publish_selected' ) {
+                     var task_type = 0;
+                     var selected = true;
+                } else if ( postDic.action_type == 'startup_selected') {
+                     var task_type = 3;
+                     var selected = true;
+                } else if ( postDic.action_type == 'shutdown_selected') {
+                     var task_type = 4;
+                     var selected = true;
+
+                };
+                if (selected == true) {
+                    var gen_task_post_dic = {
+                            'action_type':'gen_task_log',
+                            'task_type':task_type,
+                            'app_id':{{ app.id }},
+                            'selected': selected,
+                            'server_ids':postDic.server_ids
+                    };
+                } else if (selected == false) {
+                    var gen_task_post_dic = {
+                            'action_type':'gen_task_log',
+                            'task_type':task_type,
+                            'app_id':{{ app.id }},
+                            'selected': selected,
+                    };
+
+                }
+
+                $("#background").css('display','block');
+                $.post(post_url,gen_task_post_dic ,function(task_results){
+                    var obj = jQuery.parseJSON(task_results);
+                    if (obj[0] == true) {
+                        timer = setInterval("getStatus("+obj[1]+")",500);
+                        postDic['task_id'] = obj[1];
+
+                        $.post(post_url, postDic,function(callback){
+                             var obj = jQuery.parseJSON(callback);
+                                   if (obj[0] == true) {
+                                         //printResult(obj[1])
+
+                                    };
+                        });
+                    } else {
+                        alert('生成任务失败');
+                    };
+                });
+
+            };
+
+    //Get execute Status
+
+            function getStatus(task_id) {
+                    var post_url = "{% url 'main_api' %}"
+                    $.post(post_url, {'action_type':'get_process_status','task_id':task_id},function(callback){
+                        var obj = jQuery.parseJSON(callback);
+                        if (obj[0] == true) {
+                            html_process = '<div  class="bar" style="width:'+ obj[1] + '%"><span class="sr-only">'+obj[1]+'% Complete</span></div>'
+                             $('#process_bar').html('')
+                             $('#process_bar').html(html_process)
+                            if (obj[1] >= 100) {
+                                    clearInterval(timer);
+                                     $("#background").css('display','none');
+                                    printResult(task_id)
+                            };
+                        };
+                    });
+            };
+
+
+//Print Status
+            function printResult(task_id) {
+                var printPostDic = {
+                    'action_type':'get_execute_result',
+                    'task_id':task_id,
+                }
+                $('#task_id').html("Task Id : "+task_id);
+                 var post_url = "{% url 'main_api' %}"
+                 $.post(post_url, printPostDic,function(callback){
+                        var obj = jQuery.parseJSON(callback);
+                          var temp_html = '<h2 style="line-height: 2">Task Id : '+task_id+'</h2>';
+                         $.each(obj,function(n,value) {
+                              console.log(obj);
+                            if ( n ==0 ) {
+                                temp_html += '<h2 style="line-height: 2">Total Count : '+value.total_count+'</h2>';
+                                temp_html += '<h2 style="line-height: 2">Successful : <span class="badge badge-success">'+value.successfull_count+'</span></h2>';
+                                if (value.failed_count != 0 ) {
+                                    temp_html += '<h2 style="line-height: 2">Failed : <span class="badge badge-important">'+value.failed_count+'</span></h2>';
+                                }
+                            }
+
+                            if (value.war_file == false) {
+                                temp_html = temp_html +　'<h2 style="line-height: 2" >Server Name :'+value.server_name+"</h2>";
+                                temp_html = temp_html +　'<h3 style="line-height: 2"> Ip Address :'+value.ipaddr+"</h3>";
+                            }
+                            temp_html = temp_html +　'<h3 style="line-height: 2"> Operation : '+value.operation_type+"</h3>";
+                            if ( value.status == 'Successfull') {
+                                var color = 'green;'
+                            } else {
+                                 var color = 'red;'
+                            }
+
+                          temp_html = temp_html +　'<h3 style="color:'+color+';"line-height: 2;>Status : '+value.status+"</h3>";
+                            temp_html = temp_html +　 "<span>"+value.result+"</span>";
+                            temp_html = temp_html + "</br>";
+                         });
+                         $("#page-stats").css('display','block');
+                          $('#page-stats').html(temp_html);
+                  });
+                var get_server_url = "{% url 'server_list_api' %}"
+                var app_id = {{ app.id }}
+                $.post(get_server_url, {'action_type':'get_server_list','app_id':app_id},function(callback){
+                        //server_list_body
+                        var html_content = '';
+                            var obj = jQuery.parseJSON(callback);
+                             $.each(obj,function(n,value) {
+                                   html_content += '<tr class="setfont"><td><input name="checkbox_list" type="checkbox" value="'+value.id+'"/></td>';
+                                   html_content += '<td>'+value.server_name+'</td>';
+                                    html_content += '<td>'+value.ipaddr+'</td>';
+                                    if (value.app_status==true) {
+                                           html_content +=  ' <td style="text-align:center;width: 78px;color: green;">ONLINE</td>'
+                                    } else {
+                                            html_content +=  ' <td style="text-align:center;width: 78px;color: red;">OFFLINE</td>'
+                                    };
+                                    if (value.publish_date == null) {
+                                         html_content += '<td></td>';
+                                    } else {
+                                         html_content += '<td>'+value.publish_date+'</td>';
+                                    }
+                                    if (value.rollbackup_status == null ) {
+                                            html_content += '<td></td>';
+                                    } else {
+                                          html_content += '<td>'+value.rollbackup_status+'</td>';
+                                    }
+                                     if (value.task_id == null ) {
+                                                html_content += '<td></td></tr>';
+                                     } else {
+                                                html_content += '<td>'+value.task_id+'</td></tr>';
+                                        }
+
+                            });
+                            $("#selectAll").prop("checked", false);
+                            $('#server_list_body').html("");
+                            $('#server_list_body').html(html_content);
+                            $('#task_id').html();
+
+
+                });
+
+
+
+            };
+
+
+            $("body").on("click","input[name='checkbox_list']",function(){
+                var all_length = $("input[name='checkbox_list']").length;
+                var all_checked_length = $("input[name='checkbox_list']:checked").length;
+                if ( all_length   ==  all_checked_length ) {
+                       $("#selectAll").prop("checked", true);
+                } else {
+                       $("#selectAll").prop("checked", false);
+                }
+            });
+
+
+            $("#selectAll").click(function () {//全选
+                    $("input[name='checkbox_list']").prop("checked",$(this).prop("checked"));
+            });
+
+            $("#unSelect").click(function () {//全不选
+                $("#server_list :checkbox").prop("checked", false);
+            });
+
+
+
+{% endblock %}

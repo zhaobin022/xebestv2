@@ -1,0 +1,141 @@
+{% extends "index.html" %}
+
+
+{% block rightcontent %}
+ <div class="content setfont">
+
+        <div class="header">
+            <h1 class="page-title">Log Info List</h1>
+        </div>
+        <ul class="breadcrumb">
+            <li class="active" ><a href="/">App</a> <span class="divider">/</span></li>
+            <li ><a href="/server/list/?app_id={{ app.id }}">Server</a><span class="divider">/</span></li>
+            <li ><a href="/backuplist/?app_id={{ app.id }}">Backup<span class="divider">/</span></a></li>
+            <li >Loginfo</li>
+        </ul>
+        <div class="block">
+                <p class="block-heading setfont" style="font-size: 15px;">{{ app.app_name | capfirst  }} Log Info List</p>
+                <div id="app_status" class="block-body" style="display: block;margin: 0;padding: 0 0 15px 18px;background-color: #f5f5f5;font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;">
+                    <h4 style="margin: 0;padding: 0;line-height: 2">Total Count : {{ total_count }}</h4>
+                    <h4 style="margin: 0;padding: 0;line-height: 2">Successfull Count : <span class="badge badge-success">{{ successful_count }}</span></h4>
+                    <h4 style="margin: 0;padding: 0;line-height: 2">Failed Count : <span class="badge badge-important">{{ failed_count }}</span></h4>
+                </div>
+        </div>
+<div class="container-fluid">
+<form method="GET" action="/loglist/" >
+<select class="pull-left" name="operation_id">
+    <option></option>
+    {% if operation_list %}
+    {% for k,v in operation_list %}
+            <option
+
+                      {% if k == operation_id %}
+                          selected = "selected"
+                      {% endif %}
+                    value="{{ k }}">{{ v }}
+            </option>
+    {% endfor %}
+    {% endif %}
+</select>
+<input class="pull-left" type="text" placeholder="Search..." name="key_words" value="
+{% if key_words %}
+{{ key_words }}
+{% endif %}
+">
+<button  class="btn btn-primary pull-right">Search</button>
+
+<input type="hidden" name="page" value="{{ page_objects.number }}"/>
+<input type="hidden" name="app_id" value="{{ app.id }}"/>
+</form>
+    </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                      <div class="row-fluid">
+                        <div class="well">
+                           <table class="table setfont" id="backup_list">
+                              <thead>
+                                 <tr>
+                                      <th>Id</th>
+                                      <th>App Name</th>
+                                      <th>Server Name</th>
+                                      <th>Operation</th>
+                                      <th>Happened_time</th>
+                                      <th>UserName</th>
+                                      <th>Operation</th>
+                                </tr>
+                              </thead>
+                              <tbody id="backup_list_body"  style="text-align:center;">
+                                  {% for s in page_objects %}
+                                    <tr>
+                                      <td>
+                                          <a class="f_codeNum" href="#display_dir_content"  data-toggle="modal" onclick='get_log_detail("display_log_detail","{{ s.id }}")'>{{ s.id }}</a>
+                                      </td>
+                                      <td>{{ s.server.app.app_name }}</td>
+                                      <td>{{ s.server.server_name }}</td>
+                                      <td>{{ s.get_operation_display }}</td>
+                                      <td>{{ s.happened_time | date:'Y-m-d H:i:s' }}</td>
+                                      <td>{{ s.username }}</td>
+                                      {% if s.status == 0 %}
+                                          <td  style="color: green;">{{ s.get_status_display }}</td>
+                                      {% elif s.status == 1 %}
+                                            <td style="color: red;">{{ s.get_status_display }}</td>
+                                      {% endif %}
+                                    </tr>
+                                    {% endfor %}
+                              </tbody>
+                            </table>
+
+
+
+                        </div>
+                        <div class="pagination">
+                            <ul>
+                               {% if page_objects.has_previous %}
+                                       <li><a  href="/loglist/?app_id={{ app.id }}&page={{ page_objects.previous_page_number }}&key_words={{ key_words }}&operation_id={{ operation_id }}">Prev</a></li>
+                                {% endif %}
+
+                                 {% if page_range %}
+                                {% for p in page_range %}
+
+                                    {% ifequal p page_objects.number %}
+                                         <li class="active"><a href="/loglist/?app_id={{ app.id }}&page={{p}}&key_words={{ key_words }}&operation_id={{ operation_id }}">{{ p }}</a></li>
+                                    {% else %}
+                                         <li ><a href="/loglist/?app_id={{ app.id }}&page={{p}}&key_words={{ key_words }}&operation_id={{ operation_id }}">{{ p }}</a></li>
+                                     {% endifequal %}
+                                    {% endfor %}
+                                  {% endif %}
+                                    {% if page_objects.has_next %}
+                                        <li><a href="/loglist/?app_id={{ app.id }}&page={{page_objects.next_page_number}}&key_words={{ key_words }}&operation_id={{ operation_id }}">Next</a></li>
+                                    {% endif %}
+                            </ul>
+                        </div>
+
+
+
+            </div>
+                    <footer>
+                        <hr>
+
+
+
+                        <p>&copy; 2016 <a href="#" target="_blank">xebest</a></p>
+                    </footer>
+
+            </div>
+        </div>
+    </div>
+
+
+
+ {% endblock %}
+{% block javascripts  %}
+
+    function get_log_detail(hearder ,log_id) {
+        $('#display_dir_header').html(hearder);
+        $.post('/display_log_detail/',{'log_id':log_id} ,function(callback){
+            var obj = jQuery.parseJSON(callback);
+            $('#dir_content').html(obj[1]);
+        });
+    }
+
+{% endblock %}

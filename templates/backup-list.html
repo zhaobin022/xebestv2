@@ -1,0 +1,370 @@
+{% extends "index.html" %}
+
+
+{% block rightcontent %}
+    <div class="content setfont">
+
+        <div class="header">
+            <h1 class="page-title setfont">Backup List</h1>
+        </div>
+        <ul class="breadcrumb">
+            <li class="active" ><a href="/">App</a> <span class="divider">/</span></li>
+            <li ><a href="/server/list/?app_id={{ app.id }}">Server</a><span class="divider">/</span></li>
+            <li >Backup<span class="divider">/</span></li>
+            <li ><a href="/loglist/?app_id={{ app.id }}">Loginfo </a></li>
+        </ul>
+        <div class="block">
+                <p class="block-heading setfont" style="font-size: 15px;">{{ app.app_name | capfirst  }} Backup List</p>
+                <div id="app_status" class="block-body" style="display: block;margin: 0;padding: 0 0 15px 18px;background-color: #f5f5f5;font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;">
+                    <h4 style="margin: 0;padding: 0;line-height: 2">
+                        Backup Path : <a href="#display_dir_content"  class="f_codeNum" hover="" data-toggle="modal" onclick='input_dir_content("backup_path_detail","{{ app.backup_path }}")' >{{ app.backup_path }} </a>
+                    </h4>
+                    <h4 id="app_rollback_version" style="margin: 0;padding: 0;line-height: 2">RollbackStatus : {{ app.rollback_status }}</h4>
+                </div>
+        </div>
+                          <div id="process_bar" class="progress">
+                            <div  class="bar" style="width: 0%"><span class="sr-only">0% Complete</span></div>
+                         </div>
+                         <div class="block">
+                                    <a href="#page-stats" class="block-heading" data-toggle="collapse">Results</a>
+                                    <pre id="page-stats" class="block-body collapse in" style="display: none;margin:0;">
+                                     </pre>
+                        </div>        <div class="container-fluid">
+
+            <div class="row-fluid">
+                      <div class="row-fluid">
+                        <div class="btn-toolbar">
+                            <a href="#actionModal" onclick="setModal('create_backup')" data-toggle="modal" class="btn btn-primary"> Create Backup</a>
+                            <a href="#actionModal" onclick="setModal('delete_backup')" data-toggle="modal" class="btn btn-primary"> Delete selected Backup</a>
+                        </div>
+                        <div class="well">
+                            <table class="table setfont" id="backup_list">
+                              <thead>
+                                 <tr>
+                                      <th><input id="selectAll" type="checkbox"/></th>
+                                      <th>Backup Name</th>
+                                      <th>Backup Time</th>
+                                      <th>Status</th>
+                                      <th style="text-align: center;">Operation</th>
+                                </tr>
+                              </thead>
+                              <tbody id="backup_list_body"  style="text-align:center;">
+                                  {% for s in page_objects %}
+                                    <tr>
+                                      <td><input name="checkbox_list" type="checkbox" value="{{ s.id }}"/></td>
+                                      <td><a class="f_codeNum" href="#display_dir_content"  data-toggle="modal"  onclick='input_dir_content("backup_path_detail","{{ app.backup_path }}/{{ s.backup_name }}")' >{{ s.backup_name }} </a></td>
+                                      <td>{{ s.backup_time | date:'Y-m-d H:i:s' }}</td>
+                                      {% if s.status == 0 %}
+                                          <td  style="text-align:center;width: 78px;color: green;font-weight:900;">{{ s.get_status_display }}</td>
+                                           <td style="text-align: center"><a class="btn btn-primary" href="#actionModal" data-toggle="modal"   onclick="setModal('rollback',this)">Rollback</a></td>
+                                      {% elif s.status == 1 %}
+                                            <td style="text-align:center;width: 78px;color: red;font-weight:900;">{{ s.get_status_display }}</td>
+                                           <td style="text-align: center"><a class="btn btn-primary disabled">Rollback</a></td>
+                                      {% endif %}
+
+                                    </tr>
+                                    {% endfor %}
+                              </tbody>
+                            </table>
+                             <div class="pagination"  style="margin-left: 40px;" >
+                                <ul>
+                                    {% if page_objects.has_previous %}
+                                           <li><a  href="/backuplist/?app_id={{ app.id }}&page={{ page_objects.previous_page_number }}">Prev</a></li>
+                                    {% endif %}
+                                    {% if page_range|length != 1 %}
+                                    {% for p in page_range %}
+
+                                        {% ifequal p page_objects.number %}
+                                             <li class="active"><a href="/backuplist/?app_id={{ app.id }}&page={{p}}">{{ p }}</a></li>
+                                        {% else %}
+                                             <li ><a href="/backuplist/?app_id={{ app.id }}&page={{p}}">{{ p }}</a></li>
+                                         {% endifequal %}
+                                        {% endfor %}
+                                    {% endif %}
+                                        {% if page_objects.has_next %}
+                                            <li><a href="/backuplist/?app_id={{ app.id }}&page={{page_objects.next_page_number}}">Next</a></li>
+                                        {% endif %}
+                                </ul>
+                            </div>
+                        </div>
+
+
+
+
+
+                      <!--
+-->
+                           <!--confirm modal-->
+                        <div class="modal small hide fade" id="actionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                <h3 id="actionModalLabel"></h3>
+                            </div>
+                            <div class="modal-body">
+                                <p class="error-text"><i class="icon-warning-sign modal-icon"></i><div id="actionMoalMessage"></div></p>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                                <button id="actionModalButton" class="btn btn-danger" data-dismiss="modal" onclick="submitAction()"></button>
+                            </div>
+                        </div>
+
+            <!-- Modal -->
+                                <div id="backupModal"  class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                  <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                    <h3 id="myModalLabel">Backup List</h3>
+                                  </div>
+                                  <div class="modal-body">
+                                                <table class="table setfont"　id="backup_list" style="margin-left: 28px;">
+                                                  <thead>
+                                                    <tr>
+                                                      <th>Backup Name</th>
+                                                      <th>Backup Time</th>
+                                                      <th>Operation</th>
+                                                    </tr>
+                                                  </thead>
+                                                  <tbody id="backup_list_body">
+
+                                                  </tbody>
+                                                </table>
+                                  </div>
+                                  <div class="modal-footer">
+                                    <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+                                  </div>
+                                </div>
+            </div>
+                    <footer>
+                        <hr>
+                        <p>&copy; 2016 <a href="#" target="_blank">xebest</a></p>
+                    </footer>
+
+            </div>
+        </div>
+    </div>
+
+ {% endblock %}
+{% block javascripts  %}
+
+
+          //$(arg).hover(function(){
+           //    t = setTimeout(function(){ $(arg).trigger("click");}, 1000);
+          //  },function(){
+          //      clearTimeout(t);
+         // });
+            postDic = {
+                    'action_type':'',
+            }
+            // Set Modal value
+            function setModal(action_type,obj) {
+                $("#page-stats").css('display','none');
+                  $('#actionModalButton').removeAttr("disabled");
+                 $('#process_bar').html('<div  class="bar" style="width: 0%"><span class="sr-only">0% Complete</span></div>')
+                if (action_type == 'create_backup') {
+                    $('#actionModalLabel').html("Create Backup");
+                    $('#actionMoalMessage').html("Are you sure you want to create a backup for this app ?");
+                    $('#actionModalButton').html("CreateBackup");
+                    postDic = {
+                        'action_type':'create_backup',
+                        'app_id':{{ app.id }},
+                    }
+                } else if (action_type == 'rollback') {
+                    var backup_id = $.trim($(obj).parent().parent().children().find("input").val());
+                    var backup_name = $.trim($(obj).parent().parent().find("td").eq(1).html());
+                    $('#actionModalLabel').html("Rollback App");
+                    $('#actionMoalMessage').html("Are you sure you want to rollback to version ("+backup_name+") ?");
+                    $('#actionModalButton').html("RollbackConfirm");
+
+                    postDic = {
+                            'action_type':'rollback',
+                            'app_id':{{ app.id }},
+                            'backup_id': backup_id,
+                    }
+                } else if (action_type == 'delete_backup') {
+                    $('#actionModalLabel').html("Delete Selected Backup");
+                    $('#actionMoalMessage').html("Are you sure you want to delete the selected backups  ?");
+                    $('#actionModalButton').html("DeleteConfirm");
+                    var selected_backups  = $("input[name='checkbox_list']:checked");
+                    var backup_ids = new Array();
+                    $(selected_backups).each(function(i){
+                       var id = this.value;
+                        backup_ids.push(id);
+                     });
+                    postDic = {
+                            'action_type':'delete_backup',
+                            'app_id':{{ app.id }},
+                            'backup_ids':backup_ids,
+                    }
+                }
+
+            };
+
+            //Submit Action
+            function submitAction() {
+                $("#background").css('display','block');
+                var post_url = "{% url 'main_api' %}"
+                if ( postDic.action_type == 'create_backup') {
+                    var task_type=1;
+                } else if (postDic.action_type == 'rollback') {
+                    var task_type=2;
+                } else if (postDic.action_type == 'delete_backup') {
+                     $.post('/delete_backup/',postDic ,function(delete_results){
+                            console.log(postDic);
+                           if (delete_results == 'finish') {
+                                window.location.reload();
+                            };
+                     });
+                     return
+                };
+                var gen_task_post = {
+                    'action_type':'gen_task_log',
+                    'app_id':{{ app.id }},
+                    'task_type':task_type,
+                    'selected': false,
+                };
+
+                $.post(post_url,gen_task_post ,function(task_results){
+                    var obj = jQuery.parseJSON(task_results);
+                    if (obj[0] == true) {
+                        timer = setInterval("getStatus("+obj[1]+")",500);
+                        postDic['task_id'] = obj[1];
+                        $.post(post_url, postDic,function(callback){
+                             var obj = jQuery.parseJSON(callback);
+                                   if (obj[0] == true) {
+                                         //printResult(obj[1])
+                                    };
+                        });
+                    } else {
+                        alert('生成任务失败');
+                    };
+                });
+
+            };
+
+    //Get execute Status
+
+            function getStatus(task_id) {
+                    var post_url = "{% url 'main_api' %}"
+                    $.post(post_url, {'action_type':'get_process_status','task_id':task_id},function(callback){
+                        var obj = jQuery.parseJSON(callback);
+                        if (obj[0] == true) {
+                            html_process = '<div  class="bar" style="width:'+ obj[1] + '%"><span class="sr-only">'+obj[1]+'% Complete</span></div>'
+                             $('#process_bar').html('')
+                             $('#process_bar').html(html_process)
+                            if (obj[1] >= 100) {
+                                    clearInterval(timer);
+                                  $("#background").css('display','none');
+                                    printResult(task_id)
+                            };
+                        };
+                    });
+            };
+
+
+//Print Status
+            function printResult(task_id) {
+                var printPostDic = {
+                    'action_type':'get_execute_result',
+                    'task_id':task_id,
+                }
+                $('#task_id').html("Task Id : "+task_id);
+                 var post_url = "{% url 'main_api' %}"
+                 $.post(post_url, printPostDic,function(callback){
+                        var obj = jQuery.parseJSON(callback);
+
+                        console.log(obj.rollback_status);
+                        var temp_html = '<h2 style="line-height: 2">Task Id : '+task_id+'</h2>';
+                        $.each(obj,function(n,value) {
+                                if ( n == 0 && postDic.action_type == 'rollback') {
+                                        $('#app_rollback_version').html("RollbackStatus : "+value.rollback_status);
+                                        temp_html =  temp_html +　'<h2 style="line-height: 2" >Rollbackup Version : '+value.rollback_status+"</h2>";
+                                    //    temp_html =  temp_html +　'<h2 style="line-height: 2" >Total Count : '+value.total_count+"</h2>";
+                                    //    temp_html =  temp_html +　'<h2 style="line-height: 2" >Successful Count : '+value.successfull_count+"</h2>";
+                                    //    temp_html =  temp_html +　'<h2 style="line-height: 2" >Failed Count : '+value.failed_count+"</h2>";
+                                        temp_html += '<h2 style="line-height: 2">Total Count : '+value.total_count+'</h2>';
+                                       temp_html += '<h2 style="line-height: 2">Successful : <span class="badge badge-success">'+value.successfull_count+'</span></h2>';
+                                        if (value.failed_count != 0 ) {
+                                            temp_html += '<h2 style="line-height: 2">Failed : <span class="badge badge-important">'+value.failed_count+'</span></h2>';
+                                        }
+                                };
+                                temp_html = temp_html +　'<h2 style="line-height: 2" >Server Name : '+value.server_name+"</h2>";
+                                temp_html = temp_html +　'<h3 style="line-height: 2"> Ip Address : '+value.ipaddr+"</h3>";
+                                temp_html = temp_html +　'<h3 style="line-height: 2"> Operation : '+value.operation_type+"</h3>";
+                                if ( value.status == 'Successfull') {
+                                    var color = 'green;'
+                                } else {
+                                     var color = 'red;'
+                                }
+
+                                temp_html = temp_html +　'<h3 style="color:'+color+';"line-height: 2;>Status : '+value.status+"</h3>";
+                                temp_html = temp_html +　 "<span>"+value.result+"</span>";
+                                temp_html = temp_html + "</br>";
+                         });
+                         $("#page-stats").css('display','block');
+                         $('#page-stats').html(temp_html);
+                  });
+                if (postDic.action_type != 'rollback') {
+                    var get_server_url = "{% url 'backup_list_api' %}"
+                    var app_id = {{ app.id }}
+
+                    $.post(get_server_url, {'action_type':'get_backup_list','app_id':app_id},function(callback){
+                            //backup_list_body
+                            var html_content = '';
+                                var obj = jQuery.parseJSON(callback);
+                                 $.each(obj,function(n,value) {
+                                       html_content += '<tr class="setfont"><td><input name="checkbox_list" type="checkbox" value="'+value.id+'"/></td>';
+                                        html_content += '<td><a class="f_codeNum"  href="#display_dir_content"  data-toggle="modal" onclick=\'input_dir_content("backup_path_detail","{{ app.backup_path }}/'+value.backup_name+ '")\' >'+value.backup_name+' </a></td>'
+                                       html_content += '<td>'+value.backup_time+'</td>';
+                                       if ( value.status == 'Successfull') {
+                                           html_content += '<td style="text-align:center;width: 78px;color: green;font-weight:900;">'+value.status+'</td>';
+                                           html_content += '<td style="text-align: center"><a class="btn btn-primary" href="#actionModal" data-toggle="modal" onclick="setModal(\'rollback\',this)">Rollback</a></td>'
+                                        } else if ( value.status == 'Failed') {
+                                           html_content += '<td style="text-align:center;width: 78px;color: red;font-weight:900;">'+value.status+'</td>';
+                                           html_content += '<td style="text-align: center"><a class="btn btn-primary disabled">Rollback</a></td>';
+                                        }
+                                        html_content += '</tr>'
+                                });
+                                $("#selectAll").prop("checked", false);
+                                $('#backup_list_body').html("");
+                                $('#backup_list_body').html(html_content);
+                                $('#task_id').html();
+                                                         var b = null;
+                                                          var arg = $('.f_codeNum');
+                                                           arg.hover(function(){
+                                                                var _this = $(this);
+                                                                clearTimeout(b);
+                                                                b=setTimeout(function(){
+                                                                    _this.trigger('click');
+                                                                },1000)
+                                                            },function(){
+                                                                clearTimeout(b);
+                                                            });
+                    });
+
+                };
+
+            };
+
+
+            $("body").on("click","input[name='checkbox_list']",function(){
+                var all_length = $("input[name='checkbox_list']").length;
+                var all_checked_length = $("input[name='checkbox_list']:checked").length;
+                if ( all_length   ==  all_checked_length ) {
+                       $("#selectAll").prop("checked", true);
+                } else {
+                       $("#selectAll").prop("checked", false);
+                }
+            });
+
+
+            $("#selectAll").click(function () {//全选
+                    $("input[name='checkbox_list']").prop("checked",$(this).prop("checked"));
+            });
+
+            $("#unSelect").click(function () {//全不选
+                $("#backup_list :checkbox").prop("checked", false);
+            });
+
+
+
+{% endblock %}

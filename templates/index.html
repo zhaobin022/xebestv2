@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap Admin</title>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="stylesheet" type="text/css" href="/static/lib/bootstrap/css/bootstrap.css">
+    
+    <link rel="stylesheet" type="text/css" href="/static/stylesheets/theme.css">
+    <link rel="stylesheet" href="/static/lib/font-awesome/css/font-awesome.css">
+
+    <script src="/static/lib/jquery-1.7.2.min.js" type="text/javascript"></script>
+
+    <!-- Demo page code -->
+
+    <style type="text/css">
+        #line-chart {
+            height:300px;
+            width:800px;
+            margin: 0px auto;
+            margin-top: 1em;
+        }
+        .brand { font-family: georgia, serif; }
+        .brand .first {
+            color: #ccc;
+            font-style: italic;
+        }
+        .brand .second {
+            color: #fff;
+            font-weight: bold;
+        }
+        .setfont {
+            font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;
+        }
+    </style>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+      <!--
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    -->
+  </head>
+
+  <!--[if lt IE 7 ]> <body class="ie ie6"> <![endif]-->
+  <!--[if IE 7 ]> <body class="ie ie7 "> <![endif]-->
+  <!--[if IE 8 ]> <body class="ie ie8 "> <![endif]-->
+  <!--[if IE 9 ]> <body class="ie ie9 "> <![endif]-->
+  <!--[if (gt IE 9)|!(IE)]><!--> 
+  <body class="">
+  <!--<![endif]-->
+  <div id="background" class="modal-backdrop fade in" style="display: none">
+<img  src="/static/images/wait.jpg" style=" position: fixed; left: 50%;top: 50%;margin: -50px 0 0 -50px;"/>
+</div>
+                    <!-- Modal -->
+                        <div id="display_dir_content" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h3 id="display_dir_header"></h3>
+                          </div>
+                          <div id="dir_content" class="modal-body">
+                                <!-- content -->
+                          </div>
+                          <div class="modal-footer">
+                            <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+                          </div>
+                        </div>
+    <div class="navbar">
+        <div class="navbar-inner">
+                <ul class="nav pull-right">
+                    
+                    <li id="fat-menu" class="dropdown">
+                        <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon-user"></i> {{ username }}
+                            <i class="icon-caret-down"></i>
+                        </a>
+
+                        <ul class="dropdown-menu">
+                          <!--  <li><a tabindex="-1" href="#">My Account</a></li>
+                            <li class="divider"></li>
+                            -->
+                            <li><a tabindex="-1" class="visible-phone" href="#">Settings</a></li>
+                            <li class="divider visible-phone"></li>
+                            <li><a tabindex="-1" href="/logout/">Logout</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+                <a class="brand" href="/"><span class="first"></span> <span class="second">XEBEST</span></a>
+        </div>
+    </div>
+    
+
+
+    <div class="sidebar-nav" style="margin-top: 6px">
+        <a href="#dashboard-menu" class="nav-header" data-toggle="collapse"><i class="icon-dashboard"></i>Dashboard</a>
+        <ul id="dashboard-menu" class="nav nav-list collapse in">
+            {% block memublock %}
+            <li class="active"><a  href="/">Publish System</a></li>
+            <li><a href="/cmdb_main/">Cmdb System</a></li>
+            {% endblock %}
+        </ul>
+
+
+    </div>
+    
+
+{% block rightcontent %}
+    <div class="content">
+
+        <div class="header">
+            <h1 class="page-title">APP List</h1>
+        </div>
+        <ul class="breadcrumb">
+            <li class="active" >App <span class="divider">/</span></li>
+            <li ><a href="#">Server <span class="divider">/</span></a></li>
+            <li ><a href="#">Backup <span class="divider">/</span></a></li>
+            <li ><a href="#">Loginfo </a></li>
+        </ul>
+<div class="container-fluid">
+    <form id="app_search_form" method="get" action="/">
+        {%  if search %}
+        <input  name="app_name" class="pull-left" type="text" placeholder="Search..." value="{{ search }}">
+        {% else %}
+        <input  name="app_name" class="pull-left" type="text" placeholder="Search..." value="">
+        {% endif %}
+        <button  class="btn btn-primary pull-left">Search</button>
+    </form>
+    </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                      <div class="row-fluid">
+                        <div class="well">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th>#</th>
+                                  <th>App Name</th>
+                                   <th>Operation</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                              {% for a in page_objects %}
+                                <tr>
+                                  <td>{{ a.id }}</td>
+                                  <td>{{ a.app_name }}</td>
+                                    <td><a href="server/list/?app_id={{ a.id }}"  class="btn btn-primary pull-left">Publish</a></td>
+                                </tr>
+                              {% endfor %}
+                              </tbody>
+                            </table>
+                        </div>
+                        <div class="pagination">
+                            <ul>
+                               {% if page_objects.has_previous %}
+                                       <li><a  href="/?page={{ page_objects.previous_page_number }}&search={{ search }}">Prev</a></li>
+                                {% endif %}
+
+                                 {% if page_range %}
+                                {% for p in page_range %}
+
+                                    {% ifequal p page_objects.number %}
+                                         <li class="active"><a href="/?page={{p}}&search={{ search }}">{{ p }}</a></li>
+                                    {% else %}
+                                         <li ><a href="/?page={{p}}&search={{ search }}">{{ p }}</a></li>
+                                     {% endifequal %}
+                                    {% endfor %}
+                                  {% endif %}
+                                    {% if page_objects.has_next %}
+                                        <li><a href="/?page={{page_objects.next_page_number}}&search={{ search }}">Next</a></li>
+                                    {% endif %}
+                            </ul>
+                        </div>
+
+
+
+            </div>
+                    <footer>
+                        <hr>
+
+
+
+                        <p>&copy; 2016 <a href="#" target="_blank">xebest</a></p>
+                    </footer>
+
+            </div>
+        </div>
+    </div>
+
+
+ {% endblock %}
+
+    <script src="/static/lib/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript">
+
+    /*
+
+     */
+
+            var b = null;
+          var arg = $('.f_codeNum');
+           arg.hover(function(){
+                var _this = $(this);
+                clearTimeout(b);
+                b=setTimeout(function(){
+                    _this.trigger('click');
+                },1000)
+            },function(){
+                clearTimeout(b);
+            });
+
+        $("[rel=tooltip]").tooltip();
+        $(function() {
+            $('.demo-cancel-click').click(function(){return false;});
+        });
+        function input_dir_content(hearder ,dir_path) {
+            $('#display_dir_header').html(hearder);
+             var url = '/display_dir_content/';
+            if (hearder == 'war_file_path') {
+                dir_path = dir_path.substr(0,dir_path.lastIndexOf("/"));
+            };
+            $.post(url,{'dir_path':dir_path} ,function(callback){
+                var obj = jQuery.parseJSON(callback);
+                $('#dir_content').html(obj[1]);
+            });
+        }
+        {% block javascripts  %}
+            document.onkeydown=function(event){
+            e = event ? event :(window.event ? window.event : null);
+                    if(e.keyCode==13){
+                    //执行的方法
+                            //alert('回车检测到了');
+                        $("#app_search_form").submit();
+                    }
+            }
+        {% endblock %}
+    </script>
+    
+  </body>
+</html>
+
+

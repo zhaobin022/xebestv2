@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootstrap Admin</title>
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="stylesheet" type="text/css" href="/static/lib/bootstrap/css/bootstrap.css">
+    
+    <link rel="stylesheet" type="text/css" href="/static/stylesheets/theme.css">
+    <link rel="stylesheet" href="/static/lib/font-awesome/css/font-awesome.css">
+
+    <script src="/static/lib/jquery-1.7.2.min.js" type="text/javascript"></script>
+
+    <!-- Demo page code -->
+
+    <style type="text/css">
+        #line-chart {
+            height:300px;
+            width:800px;
+            margin: 0px auto;
+            margin-top: 1em;
+        }
+        .brand { font-family: georgia, serif; }
+        .brand .first {
+            color: #ccc;
+            font-style: italic;
+        }
+        .brand .second {
+            color: #fff;
+            font-weight: bold;
+        }
+        .setfont {
+            font-family: Monaco, Menlo, Consolas, 'Courier New', monospace;
+        }
+    </style>
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+      <!--
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    -->
+  </head>
+
+  <!--[if lt IE 7 ]> <body class="ie ie6"> <![endif]-->
+  <!--[if IE 7 ]> <body class="ie ie7 "> <![endif]-->
+  <!--[if IE 8 ]> <body class="ie ie8 "> <![endif]-->
+  <!--[if IE 9 ]> <body class="ie ie9 "> <![endif]-->
+  <!--[if (gt IE 9)|!(IE)]><!--> 
+  <body class="">
+  <!--<![endif]-->
+  <div id="background" class="modal-backdrop fade in" style="display: none">
+<img  src="/static/images/wait.jpg" style=" position: fixed; left: 50%;top: 50%;margin: -50px 0 0 -50px;"/>
+</div>
+                    <!-- Modal -->
+                        <div id="display_dir_content" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h3 id="display_dir_header"></h3>
+                          </div>
+                          <div id="dir_content" class="modal-body">
+                                <!-- content -->
+                          </div>
+                          <div class="modal-footer">
+                            <button class="btn" data-dismiss="modal" aria-hidden="true">关闭</button>
+                          </div>
+                        </div>
+    <div class="navbar">
+        <div class="navbar-inner">
+                <ul class="nav pull-right">
+                    
+                    <li id="fat-menu" class="dropdown">
+                        <a href="#" role="button" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="icon-user"></i> {{ username }}
+                            <i class="icon-caret-down"></i>
+                        </a>
+
+                        <ul class="dropdown-menu">
+                          <!--  <li><a tabindex="-1" href="#">My Account</a></li>
+                            <li class="divider"></li>
+                            -->
+                            <li><a tabindex="-1" class="visible-phone" href="#">Settings</a></li>
+                            <li class="divider visible-phone"></li>
+                            <li><a tabindex="-1" href="/logout/">Logout</a></li>
+                        </ul>
+                    </li>
+                    
+                </ul>
+                <a class="brand" href="/"><span class="first"></span> <span class="second">XEBEST</span></a>
+        </div>
+    </div>
+    
+
+
+    <div class="sidebar-nav" style="margin-top: 6px">
+        <a href="#dashboard-menu" class="nav-header" data-toggle="collapse"><i class="icon-dashboard"></i>Dashboard</a>
+        <ul id="dashboard-menu" class="nav nav-list collapse in">
+            {% block memublock %}
+            <li ><a  href="/">Publish System</a></li>
+            <li class="active"><a href="/cmdb_main/">Cmdb System</a></li>
+            {% endblock %}
+        </ul>
+
+
+    </div>
+    
+
+{% block rightcontent %}
+
+
+    -->
+                           <!--confirm modal-->
+        <div class="modal small hide fade" id="actionModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3 id="actionModalLabel"></h3>
+            </div>
+            <div class="modal-body">
+                <p class="error-text"><i class="icon-warning-sign modal-icon"></i><div id="actionMoalMessage"></div></p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                <button id="actionModalButton" class="btn btn-danger" data-dismiss="modal" onclick="submitSearch()"></button>
+            </div>
+        </div>
+
+
+
+    <div class="content">
+
+        <div class="header">
+            <h1 class="page-title">Server List</h1>
+        </div>
+        </br>
+        </br>
+<div class="container-fluid">
+<!--
+    <form id="server_search_form" method="get" action="/cmdb_main/">
+        </form>
+-->
+
+   <div class="btn-toolbar">
+        <form action="/cmdb_main/" method="POST" id="searchServerForm">
+            <select style="width: 100px;" class="pull-left" name="group_name" id="group_name">
+                    <option></option>
+                    {% if group_name_list %}
+                    {% for k in group_name_list %}
+                            <option value="{{ k }}"
+                                    {% if k == group_name %}
+                          selected = "selected"
+                                    {% endif %}
+                                    >
+                                {{ k }}
+                            </option>
+                    {% endfor %}
+                    {% endif %}
+            </select>
+            <input style="width: 100px;" id="server_name" name="server_name" class="pull-left" type="text" placeholder="server name ..." value="{{ server_name }}">
+            <input id="action_type" name="action_type" type="hidden" value=""/>
+        </form>
+        <a href="#" onclick='submitSearch("search")' data-toggle="modal" class="btn btn-primary">Search</a>
+        <a href="#" onclick="resetSearch()" data-toggle="modal" class="btn btn-primary">Reset</a>
+        <a href="#actionModal" onclick="setModal('gen_password')" data-toggle="modal" class="btn btn-primary"> Gen New Password</a>
+        <a href="#actionModal" onclick="setModal('reset_password')" data-toggle="modal" class="btn btn-primary"> Reset Password</a>
+        <a href="#actionModal" onclick="setModal('reset_password_tag')" data-toggle="modal" class="btn btn-primary"> Reset Password Tag</a>
+        <a href="#actionModal" onclick="setModal('connection_check')" data-toggle="modal" class="btn btn-primary">Check Connection</a>
+        <a href="#actionModal" onclick="setModal('export_excel')" data-toggle="modal" class="btn btn-primary">Export</a>
+
+
+
+    </div>
+
+    </div>
+        <div class="container-fluid">
+            <div class="row-fluid">
+                      <div class="row-fluid">
+                        <div class="well">
+                            <table class="table">
+                              <thead>
+                                <tr>
+                                  <th ><input   id="selectAll" type="checkbox"/>#</th>
+                                  <th>Server Name</th>
+                                   <th>Ipaddr</th>
+                                   <th>Port</th>
+                                   <th>Password</th>
+                                   <th>New Password</th>
+                                    <th>Change Pass Tag</th>
+                                    <th>Change Pass Time</th>
+                                   <th>Group</th>
+                                   <th>Ssh Check</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                              <form action="/cmdb_main/" method="POST" id="selected_server" >
+                              {% for s in page_objects %}
+                                <tr>
+                                  <td><input class="pull-left" name="checkbox_list" type="checkbox" value="{{ s.id }}"/>{{ s.id }}</td>
+                                  <td>{{ s.server_name }}</td>
+                                  <td>{{ s.ipaddr }}</td>
+                                  <td>{{ s.port }}</td>
+                                  <td>{{ s.password | slice:"10"}}...</td>
+                                  <td>{{ s.new_password | slice:"10" }}...</td>
+
+                                 {% if s.change_password_tag == 0 %}
+                                      <td  style="text-align:center;width: 78px;color: green;font-weight:900;">{{ s.get_change_password_tag_display }}</td>
+                                  {% elif s.change_password_tag == 1 %}
+                                        <td style="text-align:center;width: 78px;color: red;font-weight:900;">{{ s.get_change_password_tag_display }}</td>
+                                  {% endif %}
+                                  <td>{{ s.change_password_time | date:'Y-m-d H:i:s'}}</td>
+                                  <td>{{ s.server_group.group_name }}</td>
+                                  {% if s.ssh_check == 0 %}
+                                      <td  style="text-align:center;width: 78px;color: green;font-weight:900;">{{ s.get_ssh_check_display }}</td>
+                                  {% elif s.ssh_check == 1 %}
+                                        <td style="text-align:center;width: 78px;color: red;font-weight:900;">{{ s.get_ssh_check_display }}</td>
+                                  {% endif %}
+                                </tr>
+                              {% endfor %}
+                                  <input id="selected_action_type" name="action_type" type="hidden" value=""/>
+                              <input id="selected_server_name" name="server_name" type="hidden" value=""/>
+                              <input id="selected_group_name" name="group_name" type="hidden" value=""/>
+                              <input id="selected_page" name="page" type="hidden" value="{{ page_objects.number }}"/>
+                              </form>
+                              </tbody>
+                            </table>
+                        </div>
+                        <div class="pagination">
+                            <ul>
+                               {% if page_objects.has_previous %}
+                                       <li><a  href="/cmdb_main/?page={{ page_objects.previous_page_number }}&search={{ search }}">Prev</a></li>
+                                {% endif %}
+
+                                 {% if page_range %}
+                                {% for p in page_range %}
+
+                                    {% ifequal p page_objects.number %}
+                                         <li class="active"><a href="/cmdb_main/?page={{p}}&search={{ search }}">{{ p }}</a></li>
+                                    {% else %}
+                                         <li ><a href="/cmdb_main/?page={{p}}&search={{ search }}">{{ p }}</a></li>
+                                     {% endifequal %}
+                                    {% endfor %}
+                                  {% endif %}
+                                    {% if page_objects.has_next %}
+                                        <li><a href="/cmdb_main/?page={{page_objects.next_page_number}}&search={{ search }}">Next</a></li>
+                                    {% endif %}
+                            </ul>
+                        </div>
+
+
+
+            </div>
+                    <footer>
+                        <hr>
+
+
+
+                        <p>&copy; 2016 <a href="#" target="_blank">xebest</a></p>
+                    </footer>
+
+            </div>
+        </div>
+    </div>
+
+
+ {% endblock %}
+
+    <script src="/static/lib/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript">
+            var b = null;
+          var arg = $('.f_codeNum');
+           arg.hover(function(){
+                var _this = $(this);
+                clearTimeout(b);
+                b=setTimeout(function(){
+                    _this.trigger('click');
+                },1000)
+            },function(){
+                clearTimeout(b);
+            });
+        $("[rel=tooltip]").tooltip();
+        $(function() {
+            $('.demo-cancel-click').click(function(){return false;});
+        });
+        function input_dir_content(hearder ,dir_path) {
+            $('#display_dir_header').html(hearder);
+             var url = '/display_dir_content/';
+            if (hearder == 'war_file_path') {
+                dir_path = dir_path.substr(0,dir_path.lastIndexOf("/"));
+            };
+            $.post(url,{'dir_path':dir_path} ,function(callback){
+                var obj = jQuery.parseJSON(callback);
+                $('#dir_content').html(obj[1]);
+            });
+        }
+            function submitSearch(arg) {
+                  $("#background").css('display','block');
+                  if (arg == 'search') {
+                      $("#searchServerForm").attr("method","GET");
+                       $('#searchServerForm').submit();
+                  } else if (arg == 'reset_password') {
+                      $('#selected_action_type').val('reset_password')
+                    $('#selected_server_name').val( $('#server_name').val())
+                      $('#selected_group_name').val( $('#group_name').val())
+                       $('#selected_server').submit();
+                  } else if (arg == 'gen_password') {
+
+                      $('#selected_action_type').val('gen_password')
+                      $('#selected_server_name').val( $('#server_name').val())
+                      $('#selected_group_name').val( $('#group_name').val())
+                       $('#selected_server').submit();
+                  } else if (arg == 'reset_password_tag') {
+                      $('#selected_action_type').val('reset_password_tag')
+                      $('#selected_server_name').val( $('#server_name').val())
+                      $('#selected_group_name').val( $('#group_name').val())
+                       $('#selected_server').submit();
+                  } else if (arg == 'connection_check') {
+                      $('#selected_action_type').val('connection_check')
+                      $('#selected_server_name').val( $('#server_name').val())
+                      $('#selected_group_name').val( $('#group_name').val())
+                       $('#selected_server').submit();
+                  } else if (arg == 'export_excel') {
+                       $("#background").css('display','none');
+                      $('#selected_action_type').val('export_excel')
+                      $('#selected_server_name').val( $('#server_name').val())
+                      $('#selected_group_name').val( $('#group_name').val())
+                       $('#selected_server').submit();
+                  }
+
+            };
+            function resetSearch() {
+                    $('#group_name').val('');
+                    $('#server_name').val('');
+            }
+
+             function setModal(action_type) {
+                 var all_checked_length = $("input[name='checkbox_list']:checked").length;
+                 if (action_type == 'gen_password') {
+                     $('#actionModalLabel').html("Gen New Password");
+                     $('#actionMoalMessage').html("Are you sure you want to gen new for  servers ?");
+                     $('#actionModalButton').html("Confirm");
+                     $('#action_type').val('gen_password');
+                     $("#actionModalButton").attr("onclick",'submitSearch("gen_password")');
+                 } else if (action_type == 'reset_password') {
+                     if (all_checked_length == 0) {
+                           $('#actionModalButton').prop('disabled',"true");
+                     } else {
+                           $('#actionModalButton').removeAttr("disabled");
+                     }
+
+                     $('#actionModalLabel').html("Reset  Password");
+                     $('#actionMoalMessage').html("Are you sure you want to reset new for  servers ?");
+                     $('#actionModalButton').html("Confirm");
+                     $('#action_type').val('reset_password');
+                     $("#actionModalButton").attr("onclick",'submitSearch("reset_password")');
+                 } else if (action_type == 'reset_password_tag') {
+                     $('#actionModalLabel').html("Reset  Password Tag");
+                     $('#actionMoalMessage').html("Are you sure you want to reset new for  servers 's pass tag ?");
+                     $('#actionModalButton').html("Confirm");
+                     $('#action_type').val('reset_password_tag');
+                     $("#actionModalButton").attr("onclick",'submitSearch("reset_password_tag")');
+                 } else if (action_type == 'connection_check') {
+                      if (all_checked_length == 0) {
+                           $('#actionModalButton').prop('disabled',"true");
+                     } else {
+                           $('#actionModalButton').removeAttr("disabled");
+                     }
+
+                     $('#actionModalLabel').html("Check Ssh Login");
+                     $('#actionMoalMessage').html("Are you sure you want to check login server using the current password ?");
+                     $('#actionModalButton').html("Confirm");
+                     $('#action_type').val('connection_check');
+                     $("#actionModalButton").attr("onclick",'submitSearch("connection_check")');
+                 } else if (action_type == 'export_excel') {
+                     $('#actionModalLabel').html("Export account file");
+                     $('#actionMoalMessage').html("Are you sure you want to export account info file ?");
+                     $('#actionModalButton').html("Confirm");
+                     $('#action_type').val('export_excel');
+                     $("#actionModalButton").attr("onclick",'submitSearch("export_excel")');
+                 }
+             }
+
+
+
+
+
+
+
+
+        {% block javascripts  %}
+            document.onkeydown=function(event){
+            e = event ? event :(window.event ? window.event : null);
+                    if(e.keyCode==13){
+                    //执行的方法
+                            //alert('回车检测到了');
+                        $("#app_search_form").submit();
+                    }
+            }
+
+
+
+            $("body").on("click","input[name='checkbox_list']",function(){
+                var all_length = $("input[name='checkbox_list']").length;
+                var all_checked_length = $("input[name='checkbox_list']:checked").length;
+                if ( all_length   ==  all_checked_length ) {
+                       $("#selectAll").prop("checked", true);
+                } else {
+                       $("#selectAll").prop("checked", false);
+                }
+            });
+
+
+            $("#selectAll").click(function () {//全选
+                    $("input[name='checkbox_list']").prop("checked",$(this).prop("checked"));
+            });
+
+            $("#unSelect").click(function () {//全不选
+                $("#server_list :checkbox").prop("checked", false);
+            });
+
+
+        {% endblock %}
+    </script>
+    
+  </body>
+</html>
+
+
