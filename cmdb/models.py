@@ -20,7 +20,7 @@ class App(models.Model):
 
 class ServerGroup(models.Model):
     group_name =  models.CharField(max_length=30,unique=True)
-    servers  =  models.ManyToManyField('Server',null=True,blank=True)
+    servers  =  models.ManyToManyField('Server')
     description = models.TextField()
     def __unicode__(self):
         return self.group_name

@@ -1,104 +1,38 @@
-2016-01-28 16:31:36,105 login.py[line:108] INFO Unable to connect to 192.168.26.202: [Errno 111] Connection refused
-2016-01-28 16:32:00,553 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
-2016-01-28 16:32:00,673 transport.py[line:1545] INFO Authentication (password) successful!
-2016-01-28 16:34:10,415 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
-2016-01-28 16:34:10,499 transport.py[line:1545] INFO Authentication (password) successful!
-2016-01-28 16:35:44,933 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
-2016-01-28 16:35:45,054 transport.py[line:1545] INFO Authentication (password) successful!
-2016-01-28 16:49:04,642 views.py[line:372] INFO Cannot resolve keyword 'server_group' into field. Choices are: app, app_id, app_status, change_password_tag, change_password_time, id, ipaddr, logger, new_password, password, port, publish_date, rollbackup_status, server_name, servergroup, ssh_check, task, task_id, username
-2016-01-28 16:56:17,975 tools.py[line:60] INFO server 192.168.26.68 execute cmd echo 0
-2016-01-28 16:56:17,987 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
-2016-01-28 16:56:18,106 transport.py[line:1545] INFO Authentication (password) successful!
-2016-01-28 16:56:18,125 views.py[line:308] INFO check ssh connnection result : 0
- 
-2016-01-28 16:56:18,205 tools.py[line:60] INFO server 192.168.26.205 execute cmd echo 0
-2016-01-28 16:56:18,220 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
-2016-01-28 16:56:18,311 transport.py[line:1545] INFO Authentication (password) successful!
-2016-01-28 16:56:18,368 views.py[line:308] INFO check ssh connnection result : 0
- 
-2016-01-28 16:56:18,433 tools.py[line:60] INFO server 192.168.26.202 execute cmd echo 0
-2016-01-28 16:56:18,440 views.py[line:308] INFO check ssh connnection result : 1 
-2016-01-28 16:56:18,588 tools.py[line:60] INFO server 192.168.26.57 execute cmd echo 0
-2016-01-28 16:56:18,599 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
-2016-01-28 16:56:18,715 transport.py[line:1545] INFO Authentication (password) successful!
-2016-01-28 16:56:18,739 views.py[line:308] INFO check ssh connnection result : 0
- 
-2016-01-28 16:56:18,793 tools.py[line:60] INFO server 192.168.26.58 execute cmd echo 0
-2016-01-28 16:56:18,805 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
-2016-01-28 16:56:18,919 transport.py[line:1545] INFO Authentication (password) successful!
-2016-01-28 16:56:18,944 views.py[line:308] INFO check ssh connnection result : 0
- 
-2016-01-28 16:56:46,349 tools.py[line:60] INFO server 192.168.26.68 execute cmd echo 0
-2016-01-28 16:56:46,360 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
-2016-01-28 16:56:46,482 transport.py[line:1545] INFO Authentication (password) successful!
-2016-01-28 16:56:46,499 views.py[line:308] INFO check ssh connnection result : 0
- 
-2016-01-28 16:56:46,556 tools.py[line:60] INFO server 192.168.26.205 execute cmd echo 0
-2016-01-28 16:56:46,570 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
-2016-01-28 16:56:46,661 transport.py[line:1545] INFO Authentication (password) successful!
-2016-01-28 16:56:46,719 views.py[line:308] INFO check ssh connnection result : 0
- 
-2016-01-28 16:56:46,779 tools.py[line:60] INFO server 192.168.26.202 execute cmd echo 0
-2016-01-28 16:56:46,785 views.py[line:308] INFO check ssh connnection result : 1 
-2016-01-28 16:56:46,818 tools.py[line:60] INFO server 192.168.26.57 execute cmd echo 0
-2016-01-28 16:56:46,828 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
-2016-01-28 16:56:46,944 transport.py[line:1545] INFO Authentication (password) successful!
-2016-01-28 16:56:46,967 views.py[line:308] INFO check ssh connnection result : 0
- 
-2016-01-28 16:56:46,995 tools.py[line:60] INFO server 192.168.26.58 execute cmd echo 0
-2016-01-28 16:56:47,006 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
-2016-01-28 16:56:47,122 transport.py[line:1545] INFO Authentication (password) successful!
-2016-01-28 16:56:47,144 views.py[line:308] INFO check ssh connnection result : 0
- 
-2016-01-28 16:56:54,285 flushpassword.py[line:28] INFO 10
-2016-01-28 16:56:54,897 flushpassword.py[line:47] INFO  
-passwd: all authentication tokens updated successfully.
-]0;root@client02:~[root@client02 ~]
-2016-01-28 16:56:54,998 views.py[line:288] INFO client02 192.168.26.68 old password ZndWGkGUXeTSBTfw8wdcqFD5LIx8vuq9
-2016-01-28 16:56:55,194 flushpassword.py[line:28] INFO 10
-2016-01-28 16:56:55,866 flushpassword.py[line:47] INFO  
-passwd: all authentication tokens updated successfully.
-]0;root@client01:~[root@client01 ~]
-2016-01-28 16:56:55,967 views.py[line:288] INFO client01 192.168.26.205 old password kjVhQrdCtQWLbvPyyBDboSGwd3WM7bbC
-2016-01-28 16:56:56,115 views.py[line:294] INFO saltmaster01 192.168.26.202 update password failed 
-2016-01-28 16:57:16,481 flushpassword.py[line:28] INFO 10
-2016-01-28 16:57:17,231 flushpassword.py[line:47] INFO  
-passwd: all authentication tokens updated successfully.
-]0;root@axj-rac1:~[root@axj-rac1 ~]
-2016-01-28 16:57:17,332 views.py[line:288] INFO 192.168.26.57 192.168.26.57 old password rootroot
-2016-01-28 16:57:37,750 flushpassword.py[line:28] INFO 10
-2016-01-28 16:57:38,467 flushpassword.py[line:47] INFO  
-passwd: all authentication tokens updated successfully.
-]0;root@axj-rac2:~[root@axj-rac2 ~]
-2016-01-28 16:57:38,567 views.py[line:288] INFO 192.168.26.58 192.168.26.58 old password rootroot
-2016-01-28 16:57:54,867 tools.py[line:60] INFO server 192.168.26.68 execute cmd echo 0
-2016-01-28 16:57:54,878 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
-2016-01-28 16:57:54,999 transport.py[line:1545] INFO Authentication (password) successful!
-2016-01-28 16:57:55,018 views.py[line:308] INFO check ssh connnection result : 0
- 
-2016-01-28 16:57:55,075 tools.py[line:60] INFO server 192.168.26.205 execute cmd echo 0
-2016-01-28 16:57:55,090 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
-2016-01-28 16:57:55,179 transport.py[line:1545] INFO Authentication (password) successful!
-2016-01-28 16:57:55,239 views.py[line:308] INFO check ssh connnection result : 0
- 
-2016-01-28 16:57:55,283 tools.py[line:60] INFO server 192.168.26.202 execute cmd echo 0
-2016-01-28 16:57:55,290 views.py[line:308] INFO check ssh connnection result : 1 
-2016-01-28 16:57:55,429 tools.py[line:60] INFO server 192.168.26.57 execute cmd echo 0
-2016-01-28 16:57:55,441 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
-2016-01-28 16:57:55,561 transport.py[line:1545] INFO Authentication (password) successful!
-2016-01-28 16:57:55,580 views.py[line:308] INFO check ssh connnection result : 0
- 
-2016-01-28 16:57:55,635 tools.py[line:60] INFO server 192.168.26.58 execute cmd echo 0
-2016-01-28 16:57:55,645 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
-2016-01-28 16:57:55,765 transport.py[line:1545] INFO Authentication (password) successful!
-2016-01-28 16:57:55,786 views.py[line:308] INFO check ssh connnection result : 0
- 
-2016-01-28 17:01:04,691 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
-2016-01-28 17:01:04,781 transport.py[line:1545] INFO Authentication (password) successful!
-2016-01-28 17:01:16,526 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
-2016-01-28 17:01:16,644 transport.py[line:1545] INFO Authentication (password) successful!
-2016-01-28 17:02:37,715 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
-2016-01-28 17:02:37,800 transport.py[line:1545] INFO Authentication (password) successful!
-2016-01-28 17:09:29,982 login.py[line:109] INFO Unable to connect to 192.168.26.202: [Errno 111] Connection refused
-2016-01-28 17:09:39,306 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
-2016-01-28 17:09:39,394 transport.py[line:1545] INFO Authentication (password) successful!
+2016-01-29 09:32:19,893 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
+2016-01-29 09:32:20,011 transport.py[line:1545] INFO Authentication (password) successful!
+2016-01-29 09:34:17,306 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
+2016-01-29 09:34:17,390 transport.py[line:1545] INFO Authentication (password) successful!
+2016-01-29 09:48:42,512 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
+2016-01-29 09:48:42,597 transport.py[line:1545] INFO Authentication (password) successful!
+2016-01-29 09:51:54,521 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
+2016-01-29 09:51:54,605 transport.py[line:1545] INFO Authentication (password) successful!
+2016-01-29 09:53:08,289 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
+2016-01-29 09:53:08,372 transport.py[line:1545] INFO Authentication (password) successful!
+2016-01-29 10:01:53,521 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
+2016-01-29 10:01:53,605 transport.py[line:1545] INFO Authentication (password) successful!
+2016-01-29 10:17:38,411 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
+2016-01-29 10:17:38,500 transport.py[line:1545] INFO Authentication (password) successful!
+2016-01-29 10:20:48,292 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
+2016-01-29 10:20:48,377 transport.py[line:1545] INFO Authentication (password) successful!
+2016-01-29 10:23:50,865 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
+2016-01-29 10:23:50,983 transport.py[line:1545] INFO Authentication (password) successful!
+2016-01-29 10:30:16,691 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
+2016-01-29 10:30:16,774 transport.py[line:1545] INFO Authentication (password) successful!
+2016-01-29 10:39:10,912 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
+2016-01-29 10:39:10,998 transport.py[line:1545] INFO Authentication (password) successful!
+2016-01-29 11:58:40,673 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
+2016-01-29 11:58:40,791 transport.py[line:1545] INFO Authentication (password) successful!
+2016-01-29 12:05:26,922 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
+2016-01-29 12:05:27,007 transport.py[line:1545] INFO Authentication (password) successful!
+2016-01-29 13:53:54,320 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
+2016-01-29 13:53:54,429 transport.py[line:1545] INFO Authentication (password) successful!
+2016-01-29 14:13:15,956 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
+2016-01-29 14:13:16,042 transport.py[line:1545] INFO Authentication (password) successful!
+2016-01-29 14:19:28,518 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
+2016-01-29 14:19:28,601 transport.py[line:1545] INFO Authentication (password) successful!
+2016-01-29 14:21:21,584 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
+2016-01-29 14:21:21,704 transport.py[line:1545] INFO Authentication (password) successful!
+2016-01-29 14:21:48,357 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
+2016-01-29 14:21:48,440 transport.py[line:1545] INFO Authentication (password) successful!
+2016-01-29 14:26:56,274 transport.py[line:1545] INFO Connected (version 2.0, client OpenSSH_5.3)
+2016-01-29 14:26:56,360 transport.py[line:1545] INFO Authentication (password) successful!

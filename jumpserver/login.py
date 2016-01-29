@@ -1,3 +1,4 @@
+#!/usr/bin/python
 # -*- coding:utf-8 -*-
 import sys
 import paramiko
@@ -20,7 +21,7 @@ class JumpServer(object):
         django.setup()
         from cmdb import models
         self.models = models
-        self.username = os.environ.get('LOGNAME')
+        self.username = os.environ.get('SUDO_USER')
         current_time = datetime.datetime.now().strftime("%Y-%m-%d")
         file_name = 'logs/login_audit_%s_%s.log' % (self.username,current_time)
         self.fd = open(os.path.join(self.basedir,file_name),'a')
@@ -28,15 +29,18 @@ class JumpServer(object):
     def display_group(self,):
         group_query_set = self.user.server_group.all()
         self.group_dic = {}
-        x = PrettyTable(["Id","GroupName"])
+        x = PrettyTable(["Id","GroupName","Count"])
         for i,g in enumerate(group_query_set):
             self.group_dic[i] = [g.id,g.group_name]
-            x.add_row([i,g.group_name])
+            x.add_row([i,g.group_name,g.servers.count()])
         print x
 
-    def display_server(self,group_id):
+    def display_server(self,group_id,search=False,search_value=None):
         #server_query_set = self.models.Server.objects.filter(server_group_id = group_id)
-        server_query_set = self.models.ServerGroup.objects.get(id=group_id).servers.all()
+        if search:
+            server_query_set = self.models.ServerGroup.objects.get(id=group_id).servers.filter(server_name__istartswith = search_value)
+        else:
+            server_query_set = self.models.ServerGroup.objects.get(id=group_id).servers.all()
         self.server_dic = {}
         x = PrettyTable(["Id","ServerName","IpAddress" ,"Port"])
         for i,s in enumerate(server_query_set):
@@ -49,12 +53,11 @@ class JumpServer(object):
         username_list = self.models.OsUser.objects.values_list('username',flat=True)
         if self.username not in username_list:
             try:
-
                 raw_input( '''You don't have permission to login to this jumpserver ''')
                 sys.exit(1)
             except Exception , e:
                 sys.exit(1)
-                logging.info(str(e))
+              #  logging.info(str(e))
             finally:
                 sys.exit(1)
         else:
@@ -66,24 +69,41 @@ class JumpServer(object):
         while True:
             self.display_group()
             try:
-                group_index = raw_input("Please input the group index : ")
+                group_index = raw_input("Please input the group index or exit to quit the jumpserver: ")
             except KeyboardInterrupt:
                 break
+            except Exception,e:
+                break
             if group_index.isdigit() and int(group_index) in self.group_dic.keys():
+                search_tag = False
+                search_value=''
                 while True:
-                    self.display_server(self.group_dic[int(group_index)][0])
+
+                    if search_tag:
+                        self.display_server(self.group_dic[int(group_index)][0],search=True,search_value=search_value)
+                        search_tag=False
+                    else:
+                        self.display_server(self.group_dic[int(group_index)][0])
                     try:
-                        server_index = raw_input("Please input the server index : ")
+                        server_index = raw_input("Please input the server index or  exit to return to the group list or / for search server name ! \n")
                     except KeyboardInterrupt:
+                        break
+                    except Exception,e:
                         break
                     if server_index.isdigit() and int(server_index) in self.server_dic.keys():
                         s = self.server_dic[int(server_index)]
                         self.login(s)
+                    elif server_index.strip() == 'exit':
+                        break
+                    elif server_index.strip().startswith('/'):
+                        search_tag = True
                     else:
-                        print "Plase input the right server index !"
-
+                        print "Plase input the right server index  or input exit return to group list !"
+                    search_value =  server_index.strip().replace('/','',1)
+            elif group_index == 'exit':
+                sys.exit()
             else:
-                print 'Please input the right group id '
+                print 'Please input the right group id or input exit to exit the jumpserver !'
         self.fd.close()
 
     def deal_audit_log(self,cmd,s):
@@ -105,8 +125,8 @@ class JumpServer(object):
             chan.invoke_shell()
             oldtty = termios.tcgetattr(sys.stdin)
         except Exception,e:
-            print '\r\n\033[31;1mLogin fail Please connect the server admin !!\033[0m\r\n'
-            logging.info(str(e))
+            print '\r\n\033[31;1mLogin fail Please contact the server admin !!\033[0m\r\n'
+           #  (str(e))
             return
 
         try:
