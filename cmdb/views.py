@@ -18,7 +18,6 @@ import re
 from django.db.models import Q
 from utils.tools import get_dir_content
 from utils.tools import str_to_html
-import logging
 from multiprocessing import Pool
 import multiprocessing
 from utils.flushpassword import GenPassword
@@ -27,6 +26,9 @@ from django.http import HttpResponseRedirect
 from utils.tools import execute_cmd
 import xlwt
 import StringIO
+import SocketServer
+import logging
+logger = logging.getLogger('web_apps')
 
 @login_required
 def index(request):
@@ -69,7 +71,7 @@ def logout(request):
     auth.logout(request)
     return HttpResponseRedirect('/login/')
 
-
+@login_required
 def server_list(request):
     if request.method == 'GET':
         app_id = request.GET.get('app_id')
@@ -81,11 +83,11 @@ def server_list(request):
         except ValueError:
             page = 1
         server_list = models.Server.objects.filter(app = app)
-        page_range,page_objects = pagetool(page,server_list)
+        page_range,page_objects = pagetool(page,server_list,page_size=5)
         username = request.user
         return render_to_response('server-list.html',{'page_objects':page_objects,'page_range':page_range,'username':username,'app':app})
 
-
+@login_required
 def publish_api_view(request):
     if request.method == 'POST':
         try:
@@ -100,8 +102,8 @@ def publish_api_view(request):
             else:
                 return HttpResponse('finish')
         except Exception,e:
-            logging.info(str(e))
-
+            logger.info(str(e))
+@login_required
 def backup_list(request):
     if request.method == 'GET':
         app_id = request.GET.get('app_id')
@@ -117,12 +119,14 @@ def backup_list(request):
         username = request.user
         return render_to_response('backup-list.html',{'page_objects':page_objects,'page_range':page_range,'username':username,'app':app})
 
+@login_required
 def delete_backup(request):
     if request.method == 'POST':
         try:
             backup_ids = request.POST.getlist('backup_ids[]')
             app_id = request.POST.get('app_id')
             app = models.App.objects.get(id =app_id )
+            s = app.server_set.first()
             backup_list = models.Backup.objects.filter(id__in =backup_ids  )
             pattern = re.compile(r'[\w|/]+\d{14}')
             for b in backup_list:
@@ -130,15 +134,15 @@ def delete_backup(request):
                 match = pattern.match(delete_path)
                 if match:
                     if os.path.exists(delete_path):
-                        logging.info('delete bakcup id %s path %s' % (b.id,delete_path))
+                        logger.info('delete bakcup id %s path %s' % (b.id,delete_path))
                         shutil.rmtree(delete_path)
                 b.delete()
         except Exception,e:
-            logging.info(str(e))
+            logger.info(str(e))
 
 
         return HttpResponse('finish')
-
+@login_required
 def log_list(request):
     if request.method == 'GET':
         conditions = {}
@@ -199,17 +203,17 @@ def log_list(request):
                                                 'operation_id':operation_id,
                                     })
 
-
+@login_required
 def display_dir_content(request):
     if request.method == 'POST':
         try:
             dir_path = request.POST.get('dir_path')
             status , reslts = get_dir_content(dir_path)
         except Exception,e:
-            logging.info(str(e))
+            logger.info(str(e))
         return HttpResponse(json.dumps((status,reslts)))
 
-
+@login_required
 def display_log_detail(request):
     if request.method == 'POST':
         log_id = request.POST.get('log_id')
@@ -217,7 +221,7 @@ def display_log_detail(request):
         return HttpResponse(json.dumps((True,str_to_html(log.description))))
 
 
-
+@login_required
 def cmdb_main(request):
     try:
         if request.method == 'GET':
@@ -285,13 +289,13 @@ def cmdb_main(request):
                         for s in cmdb_server_list:
                             status = p.apply_async(ssh_cmd, args=(s,s.new_password,)).get()
                             if status == 0:
-                                logging.info('%s %s old password %s' % (s.server_name,s.ipaddr, s.password ))
+                                logger.info('%s %s old password %s' % (s.server_name,s.ipaddr, s.password ))
                                 s.password = s.new_password
                                 s.change_password_time = django.utils.timezone.now()
                                 s.change_password_tag = 0
                                 s.save()
                             else:
-                                logging.info('%s %s update password failed ' % (s.server_name,s.ipaddr ))
+                                logger.info('%s %s update password failed ' % (s.server_name,s.ipaddr ))
                         p.close()
                         p.join()
                     elif action_type.strip() == 'reset_password_tag':
@@ -305,7 +309,7 @@ def cmdb_main(request):
                         p = Pool(multiprocessing.cpu_count())
                         for s in cmdb_server_list:
                             status = p.apply_async(execute_cmd, args=(s,'echo 0',)).get()
-                            logging.info('check ssh connnection result : %s ' % status[0])
+                            logger.info('check ssh connnection result : %s ' % status[0])
                             if int(status[0]) == 0:
                                 s.ssh_check=0
                             else:
@@ -332,7 +336,7 @@ def cmdb_main(request):
                             sheet.write(0,5, 'New Password')
 
                             row = 1
-                            for s in models.Server.objects.filter(server_group__group_name=r['group_name']):
+                            for s in models.Server.objects.filter(servergroup__group_name=r['group_name']):
                                 sheet.write(row,0, s.server_name)
                                 sheet.write(row,1, s.ipaddr)
                                 sheet.write(row,2, s.port)
@@ -353,7 +357,7 @@ def cmdb_main(request):
                             sheet.write(0,5, 'New Password')
 
                             row = 1
-                            for s in models.Server.objects.filter(server_group__group_name=None):
+                            for s in models.Server.objects.filter(servergroup__group_name=None):
                                 sheet.write(row,0, s.server_name)
                                 sheet.write(row,1, s.ipaddr)
                                 sheet.write(row,2, s.port)
@@ -370,5 +374,5 @@ def cmdb_main(request):
                         return response
             return HttpResponseRedirect("/cmdb_main/?page=%s&group_name=%s&server_name=%s" % (page,group_name,server_name))
     except Exception,e:
-        logging.info(str(e))
+        logger.info(str(e))
 

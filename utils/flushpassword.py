@@ -6,10 +6,10 @@ import re
 import string
 import sys
 import pexpect
-import logging
 from django.utils import timezone
 import django.utils.timezone
-
+import logging
+logger = logging.getLogger('web_apps')
 
 def GenPassword(length=32,chars=string.ascii_letters+string.digits):
     return ''.join([choice(chars) for i in range(length)])
@@ -21,11 +21,9 @@ def GenPassword(length=32,chars=string.ascii_letters+string.digits):
 def ssh_cmd(s,newpassword):
     timeout = 35
     ret = -1
-    print 'ssh -p%s %s@%s' % (s.port,s.username,s.ipaddr)
     ssh = pexpect.spawn('ssh -p%s %s@%s' % (s.port,s.username,s.ipaddr))
     try:
         i = ssh.expect(['password:', 'continue connecting (yes/no)?'], timeout=timeout)
-        logging.info(10)
         if i == 0 :
             ssh.sendline(s.password)
         elif i == 1:
@@ -44,11 +42,9 @@ def ssh_cmd(s,newpassword):
 
         pattern = re.compile(r'.*tokens updated successfully.*',re.S)
         result = ssh.before
-        logging.info(result)
+        logger.info(result)
         if pattern.match(result).group():
             ret = 0
-
-            print s.change_password_tag,'password tag'
         else:
             ret = 1
     except pexpect.EOF:
@@ -58,7 +54,7 @@ def ssh_cmd(s,newpassword):
         ssh.close()
         ret = 1
     except Exception,e:  
-        logging.info(str(e))
+        logger.info(str(e))
         ret = 1
     return ret 
 

@@ -10,10 +10,11 @@ from django.http import HttpResponse, HttpResponseRedirect
 from utils.tools import str_to_html
 from utils.tools import backup_code
 from utils.tools import rollback_code
-import logging
 import shutil
 from utils.tools import empty_dir
-
+import os
+import logging
+logger = logging.getLogger('web_apps')
 
 def publish_all(request):
     try:
@@ -40,7 +41,7 @@ def publish_all(request):
                 task.save()
                 unzip_cmd = '/usr/bin/unzip -o %s -d %s' %(app.war_file_path,app.upload_path)
                 unzip_status , result = commands.getstatusoutput(unzip_cmd)
-                logging.info('unzip file : status : %s , resutls : %s' % (unzip_status,result))
+                logger.info('unzip file : status : %s , resutls : %s' % (unzip_status,result))
 
                 if unzip_status == 0:
                     models.Logger.objects.create(status=unzip_status,username=username,description=result,operation=6,task=task)
@@ -58,6 +59,8 @@ def publish_all(request):
                     s.save()
             p.close()
             p.join()
+            if app.war_file:
+                empty_dir(app.upload_path)
             return True,task.id
     except Exception,e:
         return False,str(e)
@@ -114,7 +117,7 @@ def get_execute_result(request):
                 count+=1
             return result_list
         except Exception,e:
-            logging.info(str(e))
+            logger.info(str(e))
 
 
 
@@ -188,24 +191,38 @@ def startup_all(request):
                     s.save()
                     continue
                 result = p.apply_async(execute_cmd, args=(s,cmd)).get()
-
-
+                logger.info('startup all result : %s' % ' '.join(result) )
                 if len(result) != 0:
-                    status = result[1].strip()
-                    if status == '0':
-                        s.app_status = 0
-                        models.Logger.objects.create(status=status,username=username,description=result,operation=3,server=s,task=task)
-                        s.task = task
-                        s.app_status = True
-                    elif status == '1':
-                        s.task = task
-                        s.app_status = 1
-                        models.Logger.objects.create(status=1,username=username,description=result,operation=3,server=s,task=task)
-                    s.save()
+                    if len(result) == 1:
+                        status = result[0].strip()
+                        if status == '0':
+                            s.app_status = 1
+                            models.Logger.objects.create(status=status,username=username,description="startup successfull !",operation=3,server=s,task=task)
+                            s.task = task
+                            s.app_status = True
+                        elif status == '1':
+                            s.task = task
+                            s.app_status = 0
+                            models.Logger.objects.create(status=1,username=username,description="startup failed !",operation=3,server=s,task=task)
+                        s.save()
+                    elif len(result) == 2:
+                        status = result[1].strip()
+
+                        if status == '0':
+                            s.app_status = 1
+                            models.Logger.objects.create(status=status,username=username,description=result[0],operation=3,server=s,task=task)
+                            s.task = task
+                            s.app_status = True
+                        elif status == '1':
+                            s.task = task
+                            s.app_status = 0
+                            models.Logger.objects.create(status=1,username=username,description=result[0],operation=3,server=s,task=task)
+                        s.save()
             p.close()
             p.join()
             return True,task.id
     except Exception,e:
+        logger.info('startup all execption msg : %s' % str(e))
         return False,str(e)
 
 
@@ -344,7 +361,7 @@ def publish_selected(request):
             if app.war_file:
                 unzip_cmd = '/usr/bin/unzip -o %s -d %s' %(app.war_file_path,app.upload_path)
                 unzip_status , result = commands.getstatusoutput(unzip_cmd)
-                logging.info('publish selected unzip status : %s , result : %s ' % (unzip_status,result))
+                logger.info('publish selected unzip status : %s , result : %s ' % (unzip_status,result))
                 if unzip_status == 0:
                     models.Logger.objects.create(status=unzip_status,username=username,description=result,operation=6,task=task)
                 else:
@@ -363,7 +380,7 @@ def publish_selected(request):
                 empty_dir(app.upload_path)
             return True,task.id
         except Exception,e:
-            logging.info(str(e))
+            logger.info(str(e))
             return False,str(e)
 
 

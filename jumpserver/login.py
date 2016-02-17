@@ -11,6 +11,11 @@ from prettytable import PrettyTable
 import datetime
 from paramiko.py3compat import u
 import logging
+import sys
+
+reload(sys)
+sys.setdefaultencoding('utf-8')
+
 
 class JumpServer(object):
     def __init__(self):
@@ -69,7 +74,7 @@ class JumpServer(object):
         while True:
             self.display_group()
             try:
-                group_index = raw_input("Please input the group index or exit to quit the jumpserver: ")
+                group_index = raw_input("\r\n\033[32;1mPlease input the group index or exit to quit the jumpserver: \033[0m\r\n")
             except KeyboardInterrupt:
                 break
             except Exception,e:
@@ -85,7 +90,7 @@ class JumpServer(object):
                     else:
                         self.display_server(self.group_dic[int(group_index)][0])
                     try:
-                        server_index = raw_input("Please input the server index or  exit to return to the group list or / for search server name ! \n")
+                        server_index = raw_input("\r\n\033[32;1mPlease input the server index or  exit to return to the group list or / for search server name ! \n\033[0m\r\n")
                     except KeyboardInterrupt:
                         break
                     except Exception,e:
@@ -98,12 +103,12 @@ class JumpServer(object):
                     elif server_index.strip().startswith('/'):
                         search_tag = True
                     else:
-                        print "Plase input the right server index  or input exit return to group list !"
+                        print "\r\n\033[31;1mPlase input the right server index  or input exit return to group list !\033[0m\r\n"
                     search_value =  server_index.strip().replace('/','',1)
             elif group_index == 'exit':
                 sys.exit()
             else:
-                print 'Please input the right group id or input exit to exit the jumpserver !'
+                print '\r\n\033[31;1mPlease input the right group id or input exit to exit the jumpserver !\033[0m\r\n'
         self.fd.close()
 
     def deal_audit_log(self,cmd,s):
@@ -143,6 +148,7 @@ class JumpServer(object):
             cmd = ''
             tab_input_flag = False
             while True:
+
                 # 监视 用户输入 和 远程服务器返回数据（socket）
                 # 阻塞，直到句柄可读
                 r, w, e = select.select([chan, sys.stdin], [], [], 1)
@@ -156,13 +162,14 @@ class JumpServer(object):
                             sys.stdout.write('\r\n\033[32;1m*** Session Closed ***\033[0m\r\n')
                             self.deal_audit_log("*** Session Closed ***",s)
                             break
-
                         sys.stdout.write(x)
                         sys.stdout.flush()
 
                     except socket.timeout:
                         pass
                     except UnicodeDecodeError,e:
+                        pass
+                    except UnicodeEncodeError,e:
                         pass
                 if sys.stdin in r:
                     x = sys.stdin.read(1)

@@ -2,14 +2,14 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
   <head>
     <meta charset="utf-8">
-    <title>Bootstrap Admin</title>
+    <title>Xebest Admin</title>
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <link rel="stylesheet" type="text/css" href="/static/lib/bootstrap/css/bootstrap.css">
-    
+
     <link rel="stylesheet" type="text/css" href="/static/stylesheets/theme.css">
     <link rel="stylesheet" href="/static/lib/font-awesome/css/font-awesome.css">
 
@@ -208,8 +208,8 @@
                                   <td>{{ s.server_name }}</td>
                                   <td>{{ s.ipaddr }}</td>
                                   <td>{{ s.port }}</td>
-                                  <td>{{ s.password | slice:"10"}}...</td>
-                                  <td>{{ s.new_password | slice:"10" }}...</td>
+                                  <td>{{ s.password | slice:":10"}}</td>
+                                  <td>{{ s.new_password | slice:":10" }}</td>
 
                                  {% if s.change_password_tag == 0 %}
                                       <td  style="text-align:center;width: 78px;color: green;font-weight:900;">{{ s.get_change_password_tag_display }}</td>

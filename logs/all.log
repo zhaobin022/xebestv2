@@ -1,0 +1,158 @@
+[2016-02-17 10:54:13,707][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.68 execute cmd echo 0
+[2016-02-17 10:54:13,856][task_id:web_apps][views.py:311] [INFO]- check ssh connnection result : 0
+ 
+[2016-02-17 10:54:14,108][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.205 execute cmd echo 0
+[2016-02-17 10:54:14,271][task_id:web_apps][views.py:311] [INFO]- check ssh connnection result : 0
+ 
+[2016-02-17 10:54:14,386][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.202 execute cmd echo 0
+[2016-02-17 10:54:14,535][task_id:web_apps][views.py:311] [INFO]- check ssh connnection result : 0
+ 
+[2016-02-17 10:54:14,620][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.57 execute cmd echo 0
+[2016-02-17 10:54:14,769][task_id:web_apps][views.py:311] [INFO]- check ssh connnection result : 0
+ 
+[2016-02-17 10:54:14,823][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.58 execute cmd echo 0
+[2016-02-17 10:54:14,973][task_id:web_apps][views.py:311] [INFO]- check ssh connnection result : 0
+ 
+[2016-02-17 10:54:15,060][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.74 execute cmd echo 0
+[2016-02-17 10:54:15,211][task_id:web_apps][views.py:311] [INFO]- check ssh connnection result : 0
+ 
+[2016-02-17 10:54:15,280][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.75 execute cmd echo 0
+[2016-02-17 10:54:15,435][task_id:web_apps][views.py:311] [INFO]- check ssh connnection result : 0
+ 
+[2016-02-17 10:54:41,783][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.68 execute cmd echo 0
+[2016-02-17 10:54:41,901][task_id:web_apps][views.py:311] [INFO]- check ssh connnection result : 0
+ 
+[2016-02-17 10:54:42,203][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.205 execute cmd echo 0
+[2016-02-17 10:54:42,332][task_id:web_apps][views.py:311] [INFO]- check ssh connnection result : 0
+ 
+[2016-02-17 10:54:42,614][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.202 execute cmd echo 0
+[2016-02-17 10:54:42,763][task_id:web_apps][views.py:311] [INFO]- check ssh connnection result : 0
+ 
+[2016-02-17 10:54:42,848][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.57 execute cmd echo 0
+[2016-02-17 10:54:42,998][task_id:web_apps][views.py:311] [INFO]- check ssh connnection result : 0
+ 
+[2016-02-17 10:54:43,117][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.58 execute cmd echo 0
+[2016-02-17 10:54:43,267][task_id:web_apps][views.py:311] [INFO]- check ssh connnection result : 0
+ 
+[2016-02-17 10:54:43,374][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.74 execute cmd echo 0
+[2016-02-17 10:54:43,525][task_id:web_apps][views.py:311] [INFO]- check ssh connnection result : 0
+ 
+[2016-02-17 10:54:43,603][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.75 execute cmd echo 0
+[2016-02-17 10:54:43,750][task_id:web_apps][views.py:311] [INFO]- check ssh connnection result : 0
+ 
+[2016-02-17 10:55:04,671][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.68 execute cmd echo 0
+[2016-02-17 10:55:04,788][task_id:web_apps][views.py:311] [INFO]- check ssh connnection result : 0
+ 
+[2016-02-17 10:55:05,099][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.205 execute cmd echo 0
+[2016-02-17 10:55:05,261][task_id:web_apps][views.py:311] [INFO]- check ssh connnection result : 0
+ 
+[2016-02-17 10:55:05,338][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.202 execute cmd echo 0
+[2016-02-17 10:55:05,456][task_id:web_apps][views.py:311] [INFO]- check ssh connnection result : 0
+ 
+[2016-02-17 10:55:05,654][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.57 execute cmd echo 0
+[2016-02-17 10:55:05,772][task_id:web_apps][views.py:311] [INFO]- check ssh connnection result : 0
+ 
+[2016-02-17 10:55:05,991][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.58 execute cmd echo 0
+[2016-02-17 10:55:06,140][task_id:web_apps][views.py:311] [INFO]- check ssh connnection result : 0
+ 
+[2016-02-17 10:55:06,259][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.74 execute cmd echo 0
+[2016-02-17 10:55:06,511][task_id:web_apps][views.py:311] [INFO]- check ssh connnection result : 0
+ 
+[2016-02-17 10:55:06,596][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.75 execute cmd echo 0
+[2016-02-17 10:55:06,714][task_id:web_apps][views.py:311] [INFO]- check ssh connnection result : 0
+ 
+[2016-02-17 10:55:17,236][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.68 execute cmd echo 0
+[2016-02-17 10:55:17,352][task_id:web_apps][views.py:311] [INFO]- check ssh connnection result : 0
+ 
+[2016-02-17 10:55:17,522][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.205 execute cmd echo 0
+[2016-02-17 10:55:17,649][task_id:web_apps][views.py:311] [INFO]- check ssh connnection result : 0
+ 
+[2016-02-17 10:55:17,790][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.202 execute cmd echo 0
+[2016-02-17 10:55:17,908][task_id:web_apps][views.py:311] [INFO]- check ssh connnection result : 0
+ 
+[2016-02-17 10:55:18,079][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.57 execute cmd echo 0
+[2016-02-17 10:55:18,196][task_id:web_apps][views.py:311] [INFO]- check ssh connnection result : 0
+ 
+[2016-02-17 10:55:18,276][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.58 execute cmd echo 0
+[2016-02-17 10:55:18,393][task_id:web_apps][views.py:311] [INFO]- check ssh connnection result : 0
+ 
+[2016-02-17 10:55:18,539][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.74 execute cmd echo 0
+[2016-02-17 10:55:18,690][task_id:web_apps][views.py:311] [INFO]- check ssh connnection result : 0
+ 
+[2016-02-17 10:55:18,774][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.75 execute cmd echo 0
+[2016-02-17 10:55:18,922][task_id:web_apps][views.py:311] [INFO]- check ssh connnection result : 0
+ 
+[2016-02-17 10:55:31,432][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.68 execute cmd echo 0
+[2016-02-17 10:55:31,662][task_id:web_apps][views.py:311] [INFO]- check ssh connnection result : 0
+ 
+[2016-02-17 10:55:31,933][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.205 execute cmd echo 0
+[2016-02-17 10:55:32,060][task_id:web_apps][views.py:311] [INFO]- check ssh connnection result : 0
+ 
+[2016-02-17 10:55:32,167][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.202 execute cmd echo 0
+[2016-02-17 10:55:32,285][task_id:web_apps][views.py:311] [INFO]- check ssh connnection result : 0
+ 
+[2016-02-17 10:55:32,467][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.57 execute cmd echo 0
+[2016-02-17 10:55:32,630][task_id:web_apps][views.py:311] [INFO]- check ssh connnection result : 0
+ 
+[2016-02-17 10:55:32,919][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.58 execute cmd echo 0
+[2016-02-17 10:55:33,068][task_id:web_apps][views.py:311] [INFO]- check ssh connnection result : 0
+ 
+[2016-02-17 10:55:33,179][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.74 execute cmd echo 0
+[2016-02-17 10:55:33,296][task_id:web_apps][views.py:311] [INFO]- check ssh connnection result : 0
+ 
+[2016-02-17 10:55:33,440][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.75 execute cmd echo 0
+[2016-02-17 10:55:33,588][task_id:web_apps][views.py:311] [INFO]- check ssh connnection result : 0
+ 
+[2016-02-17 10:57:30,773][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.68 execute cmd ps -ef | grep java | grep -v grep
+[2016-02-17 10:57:30,943][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.205 execute cmd ps -ef | grep java | grep -v grep
+[2016-02-17 10:57:31,154][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.202 execute cmd ps -ef | grep java | grep -v grep
+[2016-02-17 11:00:23,976][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.68 execute cmd ps -ef | grep java | grep -v grep
+[2016-02-17 11:00:24,150][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.205 execute cmd ps -ef | grep java | grep -v grep
+[2016-02-17 11:00:24,344][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.202 execute cmd ps -ef | grep java | grep -v grep
+[2016-02-17 11:00:33,071][task_id:web_apps][tools.py:116] [INFO]- /usr/bin/rsync -av --password-file=/etc/rsyncd.secrets  /opt/xebestv2/rootdir/upload/test1/synctoonline/ test@192.168.26.68::xebest/release/
+[2016-02-17 11:00:33,182][task_id:web_apps][tools.py:118] [INFO]- 0
+[2016-02-17 11:00:33,183][task_id:web_apps][tools.py:119] [INFO]- sending incremental file list
+./
+zhaobin
+
+sent 96 bytes  received 37 bytes  266.00 bytes/sec
+total size is 0  speedup is 0.00
+[2016-02-17 11:00:33,236][task_id:web_apps][tools.py:116] [INFO]- /usr/bin/rsync -av --password-file=/etc/rsyncd.secrets  /opt/xebestv2/rootdir/upload/test1/synctoonline/ test@192.168.26.205::xebest/release/
+[2016-02-17 11:00:43,335][task_id:web_apps][tools.py:118] [INFO]- 0
+[2016-02-17 11:00:43,335][task_id:web_apps][tools.py:119] [INFO]- sending incremental file list
+./
+zhaobin
+
+sent 96 bytes  received 37 bytes  12.67 bytes/sec
+total size is 0  speedup is 0.00
+[2016-02-17 11:00:43,395][task_id:web_apps][tools.py:116] [INFO]- /usr/bin/rsync -av --password-file=/etc/rsyncd.secrets  /opt/xebestv2/rootdir/upload/test1/synctoonline/ test@192.168.26.202::xebest/release/
+[2016-02-17 11:00:58,598][task_id:web_apps][tools.py:118] [INFO]- 0
+[2016-02-17 11:00:58,599][task_id:web_apps][tools.py:119] [INFO]- sending incremental file list
+./
+zhaobin
+
+sent 96 bytes  received 37 bytes  8.58 bytes/sec
+total size is 0  speedup is 0.00
+[2016-02-17 11:01:14,559][task_id:web_apps][tools.py:153] [INFO]- /usr/bin/rsync -av --password-file=/etc/rsyncd.secrets  test@192.168.26.68::xebest/release/ /opt/xebestv2/rootdir/backup/test1/20160217110114
+[2016-02-17 11:01:24,754][task_id:web_apps][tools.py:155] [INFO]- 0
+[2016-02-17 11:01:24,754][task_id:web_apps][tools.py:156] [INFO]- receiving incremental file list
+created directory /opt/xebestv2/rootdir/backup/test1/20160217110114
+./
+20160214100836
+zhaobin
+
+sent 97 bytes  received 214 bytes  29.62 bytes/sec
+total size is 0  speedup is 0.00
+[2016-02-17 11:01:53,332][task_id:web_apps][tools.py:60] [INFO]- server 192.168.26.202 execute cmd /xebest/tomcat-erp/bin/startup.sh  && echo 0 || echo 1
+[2016-02-17 11:16:26,727][task_id:web_apps][views.py:136] [INFO]- delete bakcup id 68 path /opt/xebestv2/rootdir/backup/test1/20160214100836
+[2016-02-17 11:16:35,229][task_id:web_apps][tools.py:153] [INFO]- /usr/bin/rsync -av --password-file=/etc/rsyncd.secrets  test@192.168.26.68::xebest/release/ /opt/xebestv2/rootdir/backup/test1/20160217111635
+[2016-02-17 11:16:45,438][task_id:web_apps][tools.py:155] [INFO]- 0
+[2016-02-17 11:16:45,438][task_id:web_apps][tools.py:156] [INFO]- receiving incremental file list
+created directory /opt/xebestv2/rootdir/backup/test1/20160217111635
+./
+20160214100836
+zhaobin
+
+sent 97 bytes  received 214 bytes  29.62 bytes/sec
+total size is 0  speedup is 0.00
+[2016-02-17 11:17:05,572][task_id:web_apps][views.py:136] [INFO]- delete bakcup id 73 path /opt/xebestv2/rootdir/backup/test1/20160217111635

@@ -1,3 +1,4 @@
+#-*- coding:utf-8 -*-
 """
 Django settings for xebest project.
 
@@ -118,16 +119,129 @@ LOGIN_URL = '/login/'
 
 
 
-from logging.handlers import TimedRotatingFileHandler
-from logging import Formatter
-root = logging.getLogger()
-if len(root.handlers) == 0:
-    level = logging.INFO
-    log_path = os.path.join(BASE_DIR,'logs')
-    filename = os.path.join(log_path,'system.log')
-    format = '%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s'
-    hdlr = TimedRotatingFileHandler(filename,"midnight",1,0)
-    fmt = Formatter(format)
-    hdlr.setFormatter(fmt)
-    root.addHandler(hdlr)
-root.setLevel(level)
+#from logging.handlers import TimedRotatingFileHandler
+#from logging import Formatter
+#root = logging.getLogger()
+#if len(root.handlers) == 0:
+#    level = logging.INFO
+#    log_path = os.path.join(BASE_DIR,'logs')
+#    filename = os.path.join(log_path,'system.log')
+#    format = '%(asctime)s %(filename)s[line:%(lineno)d] %(levelname)s %(message)s'
+#    hdlr = TimedRotatingFileHandler(filename,"midnight",1,0)
+#    fmt = Formatter(format)
+#    hdlr.setFormatter(fmt)
+#    root.addHandler(hdlr)
+#root.setLevel(level)
+
+LOGGING_stamdard_format = '[%(asctime)s][task_id:%(name)s][%(filename)s:%(lineno)d] [%(levelname)s]- %(message)s'
+LOGGING_simple_format = '[%(filename)s:%(lineno)d][%(levelname)s] %(message)s'
+LOGGING_request_format = '[%(asctime)s][%(status_code)s][%(request)s] %(message)s'
+REST_SESSION_LOGIN = False
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,# this fixes the problem
+    'formatters': {
+        'standard': {#详细
+            'format': LOGGING_stamdard_format
+        },
+        'simple': {#简单
+            'format': LOGGING_simple_format
+        },
+        'request': {#简单
+            'format': LOGGING_request_format
+        },
+    },
+    'filters': {},
+    'handlers': {
+        'mail_admins': {
+            'level': 'ERROR',
+            'class': 'django.utils.log.AdminEmailHandler',
+            'include_html': True,
+        },
+        'console':{
+            'level': 'INFO',
+            'class': 'logging.StreamHandler',#打印到前台
+            'formatter': 'simple'
+        },
+        'default': {
+            'level':'DEBUG',
+            'class':'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(BASE_DIR+'/logs/','all.log'), #或者直接写路径：'c:\logs\all.log',
+            'maxBytes': 1024*1024*10, # 10 MB
+            'backupCount': 5,
+            'formatter':'standard',
+        },
+        'request': {
+            'level':'DEBUG',
+            'class':'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(BASE_DIR+'/logs/','request.log'), #或者直接写路径：'c:\logs\all.log',
+            'maxBytes': 1024*1024*10, # 10 MB
+            'backupCount': 5,
+            'formatter':'request',
+        },
+        'db': {
+            'level':'DEBUG',
+            'class':'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(BASE_DIR+'/logs/','db.log'), #或者直接写路径：'c:\logs\all.log',
+            'maxBytes': 1024*1024*10, # 10 MB
+            'backupCount': 5,
+            'formatter':'standard',
+        },
+        'scprits_handler': {
+            'level':'DEBUG',
+            'class':'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(BASE_DIR+'/logs/','scprits.log'), #或者直接写路径：'c:\logs\all.log',
+            'maxBytes': 1024*1024*10, # 10 MB
+            'backupCount': 5,
+            'formatter':'standard',
+        },
+        'core': {
+            'level':'DEBUG',
+            'class':'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(BASE_DIR+'/logs/','core.log'), #或者直接写路径：'c:\logs\all.log',
+            'maxBytes': 1024*1024*10, # 10 MB
+            'backupCount': 5,
+            'formatter':'standard',
+        },
+        'web_apps': {
+            'level':'DEBUG',
+            'class':'logging.handlers.RotatingFileHandler',
+            'filename': os.path.join(BASE_DIR+'/logs/','web_apps.log'), #或者直接写路径：'c:\logs\all.log',
+            'maxBytes': 1024*1024*10, # 10 MB
+            'backupCount': 5,
+            'formatter':'standard',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['default','console'],
+            'propagate': False,
+            'level': 'DEBUG',
+        },
+        'django.request': {
+            'handlers': ['request','default'],
+            'level': 'DEBUG',
+            'propagate': False,
+        },
+        'scripts': { # 脚本专用日志
+            'handlers': ['scprits_handler','default','console'],
+            'level': 'DEBUG',
+            'propagate': False
+        },
+        'web_apps': { # 脚本专用日志
+            'handlers': ['web_apps','default'],
+            'level': 'INFO',
+            'propagate': False
+        },
+        'core': { # 脚本专用日志
+            'handlers': ['core','default','console'],
+            'level': 'DEBUG',
+            'propagate': False
+        },
+        'django.db.backends':{
+            'handlers': ['db'],
+            'level': 'DEBUG',
+            'propagate': False
+        },
+    }
+}

@@ -1,4 +1,4 @@
-
+# -*- coding:utf-8 -*-
 from django.db import models
 
 # Create your models here.
@@ -29,13 +29,13 @@ class OsUser(models.Model):
     server_group = models.ManyToManyField(ServerGroup)
 
 class Server(models.Model):
-    server_name = models.CharField(max_length=30,unique=True)
+    server_name = models.CharField(max_length=30,unique=True,verbose_name=u'服务器名')
     ipaddr = models.GenericIPAddressField(null=True,unique=True)
     port =  models.IntegerField(blank=True,null=True,default='22310')
     username = models.CharField(max_length=30,null=True,default='root')
     password = models.CharField(max_length=40,null=True)
     new_password = models.CharField(max_length=40,null=True,blank=True)
-    app = models.ForeignKey(App,null=True)
+    app = models.ForeignKey(App,null=True,blank=True)
     app_status = models.BooleanField(default=True)
     publish_date = models.DateTimeField(blank=True,null=True)
     rollbackup_status = models.CharField(max_length=30,null=True,blank=True)

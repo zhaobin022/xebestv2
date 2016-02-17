@@ -10,9 +10,9 @@ import django.utils.timezone
 import multiprocessing
 from multiprocessing import Pool
 import os
-import logging
 import shutil
-
+import logging
+logger = logging.getLogger('web_apps')
 
 
 import time
@@ -57,7 +57,7 @@ def pagetool(page,obj_list,page_size=3,after_range_num=3, before_range_num=3):
 def execute_cmd(s,cmd):
     try:
 
-        logging.info('server %s execute cmd %s' % (s.ipaddr,cmd))
+        logger.info('server %s execute cmd %s' % (s.ipaddr,cmd))
         ssh = paramiko.SSHClient()
         ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
         ssh.connect(s.ipaddr,s.port,s.username, s.password)
@@ -65,7 +65,7 @@ def execute_cmd(s,cmd):
         result = stdout.readlines()
         ssh.close()
     except Exception , e:
-        print str(e),'--------------------------------------------------------------------------'
+        logger.info(str(e))
         return ['1',str(e)]
     return result
 
@@ -113,10 +113,10 @@ def rsyncCode(s,app,username,unzip_status,task):
                 global_setttings.rsync_server_dic['warehouse'],
                 app_path
             )
+        logger.info(cmd)
         status,result = commands.getstatusoutput(cmd)
-        logging.info(cmd)
-        logging.info(status)
-        logging.info(result)
+        logger.info(status)
+        logger.info(result)
         if status == 0:
             s.task = task;
             s.publish_date = app.publish_date
@@ -150,10 +150,10 @@ def backup_code(s,app,username,task):
                                                         app_path,
                                                         backup_path,
                                                         backupName)
-    logging.info(cmd)
+    logger.info(cmd)
     status,result = commands.getstatusoutput(cmd)
-    logging.info(status)
-    logging.info(result)
+    logger.info(status)
+    logger.info(result)
     if status == 0:
         models.Backup.objects.create(backup_name=backupName,app=app,status=status,backup_time=backupTime)
         models.Logger.objects.create(status=0,username=username,description=result,operation=1,server=s,task=task)
@@ -190,10 +190,10 @@ def rollback_code(app,backup,username,task):
                                                     s.ipaddr,
                                                     global_setttings.rsync_server_dic['warehouse'],
                                                     app_path)
-        logging.info(cmd)
+        logger.info(cmd)
         result = p.apply_async(commands.getstatusoutput, args=(cmd,)).get()
-        logging.info(result[0])
-        logging.info(result[1])
+        logger.info(result[0])
+        logger.info(result[1])
         if result[0] == 0:
             s.rollbackup_status = backup_name.strip('/')
             models.Logger.objects.create(status=0,username=username,description=result[1],operation=2,server=s,task=task)
