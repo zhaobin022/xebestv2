@@ -64,3 +64,6 @@ for thread in threads:
     thread.start()
 for thread in threads:
     thread.join()
+
+
+print threads
