@@ -156,3 +156,5 @@ zhaobin
 sent 97 bytes  received 214 bytes  29.62 bytes/sec
 total size is 0  speedup is 0.00
 [2016-02-17 11:17:05,572][task_id:web_apps][views.py:136] [INFO]- delete bakcup id 73 path /opt/xebestv2/rootdir/backup/test1/20160217111635
+[2016-02-17 14:24:05,419][task_id:django.request][base.py:170] [WARNING]- Not Found: /favicon.ico
+[2016-02-17 14:24:05,431][task_id:django.request][base.py:170] [WARNING]- Not Found: /favicon.ico
