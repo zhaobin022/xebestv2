@@ -65,6 +65,3 @@ for thread in threads:
 for thread in threads:
     thread.join()
 
-
-print threads
-print 'ok'

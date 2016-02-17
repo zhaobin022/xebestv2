@@ -1,341 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6df778e3-4b8d-462e-a8e8-1136113bd058" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/images/140x140.gif" afterPath="$PROJECT_DIR$/statics/images/140x140.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/images/170x170.gif" afterPath="$PROJECT_DIR$/statics/images/170x170.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/FontAwesome-Vectors.pdf" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/FontAwesome-Vectors.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/FontAwesome-Vectors.pdf" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/FontAwesome-Vectors.pdf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/FontAwesome.ttf" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/FontAwesome.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/FontAwesome.ttf" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/FontAwesome.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/images/background.png" afterPath="$PROJECT_DIR$/statics/images/background.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/images/black-Linen.png" afterPath="$PROJECT_DIR$/statics/images/black-Linen.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/images/blue-paper.png" afterPath="$PROJECT_DIR$/statics/images/blue-paper.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/images/extra_clean_paper.png" afterPath="$PROJECT_DIR$/statics/images/extra_clean_paper.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/ico/favicon.ico" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/ico/favicon.ico" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/ico/favicon.ico" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/ico/favicon.ico" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/font/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/font/fontawesome-webfont.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/font/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/font/fontawesome-webfont.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/font/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/font/fontawesome-webfont.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/font/fontawesome-webfont.eot" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/font/fontawesome-webfont.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/font/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/font/fontawesome-webfont.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/font/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/font/fontawesome-webfont.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/font/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/font/fontawesome-webfont.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/font/fontawesome-webfont.ttf" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/font/fontawesome-webfont.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/font/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/font/fontawesome-webfont.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/font/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/font/fontawesome-webfont.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/font/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/font/fontawesome-webfont.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/font/fontawesome-webfont.woff" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/font/fontawesome-webfont.woff" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/images/furley_bg.png" afterPath="$PROJECT_DIR$/statics/images/furley_bg.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/bootstrap/img/glyphicons-halflings-white.png" afterPath="$PROJECT_DIR$/statics/lib/bootstrap/img/glyphicons-halflings-white.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/bootstrap/img/glyphicons-halflings-white.png" afterPath="$PROJECT_DIR$/statics/lib/lib/bootstrap/img/glyphicons-halflings-white.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/bootstrap/img/glyphicons-halflings.png" afterPath="$PROJECT_DIR$/statics/lib/bootstrap/img/glyphicons-halflings.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/bootstrap/img/glyphicons-halflings.png" afterPath="$PROJECT_DIR$/statics/lib/lib/bootstrap/img/glyphicons-halflings.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/font/museo_slab_300-webfont.eot" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/font/museo_slab_300-webfont.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/font/museo_slab_300-webfont.eot" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/font/museo_slab_300-webfont.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/font/museo_slab_300-webfont.ttf" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/font/museo_slab_300-webfont.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/font/museo_slab_300-webfont.ttf" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/font/museo_slab_300-webfont.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/font/museo_slab_500-webfont.eot" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/font/museo_slab_500-webfont.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/font/museo_slab_500-webfont.eot" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/font/museo_slab_500-webfont.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/font/museo_slab_500-webfont.ttf" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/font/museo_slab_500-webfont.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/font/museo_slab_500-webfont.ttf" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/font/museo_slab_500-webfont.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/font/proximanova-webfont.eot" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/font/proximanova-webfont.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/font/proximanova-webfont.eot" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/font/proximanova-webfont.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/font/proximanova-webfont.ttf" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/font/proximanova-webfont.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/font/proximanova-webfont.ttf" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/font/proximanova-webfont.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/images/subtle_surface.png" afterPath="$PROJECT_DIR$/statics/images/subtle_surface.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_diagonals-thick_90_eeeeee_40x40.png" afterPath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_diagonals-thick_90_eeeeee_40x40.png" afterPath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_flat_15_cd0a0a_40x100.png" afterPath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_flat_15_cd0a0a_40x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_flat_15_cd0a0a_40x100.png" afterPath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_flat_15_cd0a0a_40x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_glass_100_e4f1fb_1x400.png" afterPath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_glass_100_e4f1fb_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_glass_100_e4f1fb_1x400.png" afterPath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_glass_100_e4f1fb_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_glass_50_3baae3_1x400.png" afterPath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_glass_50_3baae3_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_glass_50_3baae3_1x400.png" afterPath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_glass_50_3baae3_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_glass_80_d7ebf9_1x400.png" afterPath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_glass_80_d7ebf9_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_glass_80_d7ebf9_1x400.png" afterPath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_glass_80_d7ebf9_1x400.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_highlight-hard_100_f2f5f7_1x100.png" afterPath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_highlight-hard_100_f2f5f7_1x100.png" afterPath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_highlight-hard_70_000000_1x100.png" afterPath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_highlight-hard_70_000000_1x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_highlight-hard_70_000000_1x100.png" afterPath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_highlight-hard_70_000000_1x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_highlight-soft_100_deedf7_1x100.png" afterPath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_highlight-soft_100_deedf7_1x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_highlight-soft_100_deedf7_1x100.png" afterPath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_highlight-soft_100_deedf7_1x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_highlight-soft_25_ffef8f_1x100.png" afterPath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_highlight-soft_25_ffef8f_1x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_highlight-soft_25_ffef8f_1x100.png" afterPath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-bg_highlight-soft_25_ffef8f_1x100.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-icons_2694e8_256x240.png" afterPath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-icons_2694e8_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-icons_2694e8_256x240.png" afterPath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-icons_2694e8_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-icons_2e83ff_256x240.png" afterPath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-icons_2e83ff_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-icons_2e83ff_256x240.png" afterPath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-icons_2e83ff_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-icons_3d80b3_256x240.png" afterPath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-icons_3d80b3_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-icons_3d80b3_256x240.png" afterPath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-icons_3d80b3_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-icons_72a7cf_256x240.png" afterPath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-icons_72a7cf_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-icons_72a7cf_256x240.png" afterPath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-icons_72a7cf_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-icons_ffffff_256x240.png" afterPath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-icons_ffffff_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-icons_ffffff_256x240.png" afterPath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/cupertino/images/ui-icons_ffffff_256x240.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/.gitignore" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/.gitignore" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/403.html" afterPath="$PROJECT_DIR$/templates/403.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/404.html" afterPath="$PROJECT_DIR$/templates/404.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/500.html" afterPath="$PROJECT_DIR$/templates/500.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/503.html" afterPath="$PROJECT_DIR$/templates/503.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/GPL-LICENSE.txt" afterPath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/GPL-LICENSE.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/GPL-LICENSE.txt" afterPath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/GPL-LICENSE.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/MIT-LICENSE.txt" afterPath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/MIT-LICENSE.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/MIT-LICENSE.txt" afterPath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/MIT-LICENSE.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/README.md" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/README.md" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/__init__.py" afterPath="$PROJECT_DIR$/backend/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmdb/__init__.py" afterPath="$PROJECT_DIR$/cmdb/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmdb/migrations/__init__.py" afterPath="$PROJECT_DIR$/cmdb/migrations/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/__init__.py" afterPath="$PROJECT_DIR$/conf/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jumpserver/__init__.py" afterPath="$PROJECT_DIR$/jumpserver/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/__init__.py" afterPath="$PROJECT_DIR$/scripts/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/__init__.py" afterPath="$PROJECT_DIR$/utils/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xebest/__init__.py" afterPath="$PROJECT_DIR$/xebest/__init__.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/a.py" afterPath="$PROJECT_DIR$/scripts/a.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/accordion.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/accordion.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/accordion.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/accordion.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmdb/admin.py" afterPath="$PROJECT_DIR$/cmdb/admin.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/agenda-views.html" afterPath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/agenda-views.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/agenda-views.html" afterPath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/agenda-views.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/alerts.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/alerts.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/alerts.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/alerts.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/all.log" afterPath="$PROJECT_DIR$/logs/all.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/js/backbone.min.js" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/js/backbone.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/js/backbone.min.js" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/js/backbone.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/backup-list.html" afterPath="$PROJECT_DIR$/templates/backup-list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/basic-views.html" afterPath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/basic-views.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/basic-views.html" afterPath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/basic-views.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-alert.js" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-alert.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-alert.js" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-alert.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-button.js" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-button.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-button.js" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-button.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-carousel.js" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-carousel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-carousel.js" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-carousel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-collapse.js" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-collapse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-collapse.js" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-collapse.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-dropdown.js" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-dropdown.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-dropdown.js" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-dropdown.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-modal.js" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-modal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-modal.js" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-modal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-popover.js" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-popover.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-popover.js" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-popover.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-scrollspy.js" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-scrollspy.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-scrollspy.js" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-scrollspy.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-tab.js" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-tab.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-tab.js" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-tab.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-tooltip.js" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-tooltip.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-tooltip.js" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-tooltip.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-transition.js" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-transition.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-transition.js" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-transition.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-typeahead.js" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-typeahead.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-typeahead.js" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/js/tw-bs-201/bootstrap-typeahead.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/bootstrap/css/bootstrap.css" afterPath="$PROJECT_DIR$/statics/lib/bootstrap/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/bootstrap/css/bootstrap.css" afterPath="$PROJECT_DIR$/statics/lib/lib/bootstrap/css/bootstrap.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/bootstrap/js/bootstrap.js" afterPath="$PROJECT_DIR$/statics/lib/bootstrap/js/bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/bootstrap/js/bootstrap.js" afterPath="$PROJECT_DIR$/statics/lib/lib/bootstrap/js/bootstrap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/bootstrap.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/bootstrap.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/bootstrap.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/bootstrap.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/bootstrap/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/statics/lib/bootstrap/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/bootstrap/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/statics/lib/lib/bootstrap/css/bootstrap.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/bootstrap/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/statics/lib/bootstrap/js/bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/bootstrap/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/statics/lib/lib/bootstrap/js/bootstrap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/breadcrumbs.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/breadcrumbs.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/breadcrumbs.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/breadcrumbs.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/button-groups.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/button-groups.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/button-groups.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/button-groups.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/buttons.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/buttons.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/buttons.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/buttons.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/calendar.html" afterPath="$PROJECT_DIR$/templates/calendar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/carousel.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/carousel.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/carousel.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/carousel.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/changelog.txt" afterPath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/changelog.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/changelog.txt" afterPath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/changelog.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/close.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/close.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/close.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/close.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmdb/cmdb_url.py" afterPath="$PROJECT_DIR$/cmdb/cmdb_url.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/code.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/code.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/code.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/code.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/component-animations.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/component-animations.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/component-animations.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/component-animations.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/db.log" afterPath="$PROJECT_DIR$/logs/db.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/default.html" afterPath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/default.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/default.html" afterPath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/default.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/dropdowns.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/dropdowns.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/dropdowns.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/dropdowns.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/stylesheets/elements.css" afterPath="$PROJECT_DIR$/statics/stylesheets/elements.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/external-dragging.html" afterPath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/external-dragging.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/external-dragging.html" afterPath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/external-dragging.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/faq.html" afterPath="$PROJECT_DIR$/templates/faq.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/flushpassword.py" afterPath="$PROJECT_DIR$/utils/flushpassword.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/css/font-awesome-ie7.css" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/css/font-awesome-ie7.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/css/font-awesome-ie7.css" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/css/font-awesome-ie7.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/css/font-awesome-ie7.css" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/css/font-awesome-ie7.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/css/font-awesome-ie7.css" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/css/font-awesome-ie7.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/font-awesome-ie7.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/font-awesome-ie7.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/less/font-awesome-ie7.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/less/font-awesome-ie7.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/font-awesome-ie7.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/font-awesome-ie7.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/less/font-awesome-ie7.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/less/font-awesome-ie7.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/css/font-awesome.css" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/css/font-awesome.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/css/font-awesome.css" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/css/font-awesome.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/css/font-awesome.css" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/css/font-awesome.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/css/font-awesome.css" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/css/font-awesome.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/font-awesome.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/font-awesome.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/less/font-awesome.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/less/font-awesome.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/font-awesome.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/font-awesome.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/less/font-awesome.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/less/font-awesome.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/sass/font-awesome.sass" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/sass/font-awesome.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/sass/font-awesome.sass" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/sass/font-awesome.sass" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/sass/font-awesome.scss" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/sass/font-awesome.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/sass/font-awesome.scss" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/sass/font-awesome.scss" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/font-site.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/font-site.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/font-site.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/font-site.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/font/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/font/fontawesome-webfont.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/font/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/font/fontawesome-webfont.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/font/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/font/fontawesome-webfont.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/font/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/font/fontawesome-webfont.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/forms.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/forms.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/forms.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/forms.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/fullcalendar/fullcalendar.css" afterPath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/fullcalendar/fullcalendar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/fullcalendar/fullcalendar.css" afterPath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/fullcalendar/fullcalendar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/fullcalendar/fullcalendar.js" afterPath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/fullcalendar/fullcalendar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/fullcalendar/fullcalendar.js" afterPath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/fullcalendar/fullcalendar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/fullcalendar/fullcalendar.min.js" afterPath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/fullcalendar/fullcalendar.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/fullcalendar/fullcalendar.min.js" afterPath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/fullcalendar/fullcalendar.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/fullcalendar/fullcalendar.print.css" afterPath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/fullcalendar/fullcalendar.print.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/fullcalendar/fullcalendar.print.css" afterPath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/fullcalendar/fullcalendar.print.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/gcal.html" afterPath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/gcal.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/gcal.html" afterPath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/gcal.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/fullcalendar/gcal.js" afterPath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/fullcalendar/gcal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/fullcalendar/gcal.js" afterPath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/fullcalendar/gcal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/global_setttings.py" afterPath="$PROJECT_DIR$/conf/global_setttings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/grid.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/grid.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/grid.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/grid.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/help.html" afterPath="$PROJECT_DIR$/templates/help.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/hero-unit.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/hero-unit.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/hero-unit.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/hero-unit.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/index.html" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/index.html" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/index.html" afterPath="$PROJECT_DIR$/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/js/index/index.js" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/js/index/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/js/index/index.js" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/js/index/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/js/jquery-1.7.1.min.js" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/js/jquery-1.7.1.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/jquery/jquery-1.7.1.min.js" afterPath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/jquery/jquery-1.7.1.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/js/jquery-1.7.1.min.js" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/js/jquery-1.7.1.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/jquery/jquery-1.7.1.min.js" afterPath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/jquery/jquery-1.7.1.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/jquery-1.7.2.min.js" afterPath="$PROJECT_DIR$/statics/lib/jquery-1.7.2.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/jquery-1.7.2.min.js" afterPath="$PROJECT_DIR$/statics/lib/lib/jquery-1.7.2.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/jquery-1.8.1.min.js" afterPath="$PROJECT_DIR$/statics/lib/jquery-1.8.1.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/jquery-1.8.1.min.js" afterPath="$PROJECT_DIR$/statics/lib/lib/jquery-1.8.1.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/jquery/jquery-ui-1.8.17.custom.min.js" afterPath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/jquery/jquery-ui-1.8.17.custom.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/jquery/jquery-ui-1.8.17.custom.min.js" afterPath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/jquery/jquery-ui-1.8.17.custom.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/json-events.php" afterPath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/json-events.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/json-events.php" afterPath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/json-events.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/json.html" afterPath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/json.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/json.html" afterPath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/json.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/labels-badges.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/labels-badges.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/labels-badges.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/labels-badges.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/layouts.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/layouts.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/layouts.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/layouts.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/log-list.html" afterPath="$PROJECT_DIR$/templates/log-list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jumpserver/login.py" afterPath="$PROJECT_DIR$/jumpserver/login.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/main_cmdb.html" afterPath="$PROJECT_DIR$/templates/main_cmdb.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/manage.py" afterPath="$PROJECT_DIR$/manage.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/media.html" afterPath="$PROJECT_DIR$/templates/media.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/mixins.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/mixins.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/mixins.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/mixins.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/mixins.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/mixins.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/mixins.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/mixins.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/modals.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/modals.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/modals.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/modals.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmdb/models.py" afterPath="$PROJECT_DIR$/cmdb/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/navbar.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/navbar.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/navbar.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/navbar.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/navs.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/navs.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/navs.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/navs.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/pager.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/pager.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/pager.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/pager.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/pagination.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/pagination.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/pagination.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/pagination.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/popovers.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/popovers.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/popovers.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/popovers.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/css/prettify.css" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/css/prettify.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/css/prettify.css" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/css/prettify.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/js/prettify.min.js" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/js/prettify.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/js/prettify.min.js" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/js/prettify.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/privacy-policy.html" afterPath="$PROJECT_DIR$/templates/privacy-policy.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/progress-bars.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/progress-bars.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/progress-bars.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/progress-bars.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/backend/publish_api.py" afterPath="$PROJECT_DIR$/backend/publish_api.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/redis_helper.py" afterPath="$PROJECT_DIR$/scripts/redis_helper.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logs/request.log" afterPath="$PROJECT_DIR$/logs/request.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/reset-password.html" afterPath="$PROJECT_DIR$/templates/reset-password.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/reset.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/reset.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/reset.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/reset.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/responsive-1200px-min.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/responsive-1200px-min.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/responsive-1200px-min.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/responsive-1200px-min.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/responsive-767px-max.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/responsive-767px-max.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/responsive-767px-max.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/responsive-767px-max.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/responsive-768px-979px.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/responsive-768px-979px.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/responsive-768px-979px.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/responsive-768px-979px.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/responsive-navbar.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/responsive-navbar.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/responsive-navbar.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/responsive-navbar.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/responsive-utilities.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/responsive-utilities.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/responsive-utilities.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/responsive-utilities.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/responsive.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/responsive.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/responsive.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/responsive.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/scaffolding.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/scaffolding.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/scaffolding.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/scaffolding.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/selectable.html" afterPath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/selectable.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/selectable.html" afterPath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/selectable.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/server-list.html" afterPath="$PROJECT_DIR$/templates/server-list.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xebest/settings.py" afterPath="$PROJECT_DIR$/xebest/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/sign-in.html" afterPath="$PROJECT_DIR$/templates/sign-in.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/sign-up.html" afterPath="$PROJECT_DIR$/templates/sign-up.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/css/site.css" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/css/site.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/css/site.css" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/css/site.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/site.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/site.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/site.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/site.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/sprites.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/sprites.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/sprites.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/sprites.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/tables.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/tables.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/tables.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/tables.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/terms-and-conditions.html" afterPath="$PROJECT_DIR$/templates/terms-and-conditions.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/test.py" afterPath="$PROJECT_DIR$/scripts/test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmdb/tests.py" afterPath="$PROJECT_DIR$/cmdb/tests.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/cupertino/theme.css" afterPath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/cupertino/theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/cupertino/theme.css" afterPath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/cupertino/theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/stylesheets/theme.css" afterPath="$PROJECT_DIR$/statics/stylesheets/theme.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/theme.html" afterPath="$PROJECT_DIR$/statics/lib/fullcalendar-1.5.3/demos/theme.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/theme.html" afterPath="$PROJECT_DIR$/statics/lib/lib/fullcalendar-1.5.3/demos/theme.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/thumbnails.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/thumbnails.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/thumbnails.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/thumbnails.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/tools.py" afterPath="$PROJECT_DIR$/utils/tools.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/tooltip.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/tooltip.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/tooltip.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/tooltip.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/type.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/type.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/type.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/type.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/js/underscore.min.js" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/js/underscore.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/js/underscore.min.js" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/js/underscore.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xebest/urls.py" afterPath="$PROJECT_DIR$/xebest/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/user.html" afterPath="$PROJECT_DIR$/templates/user.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/users.html" afterPath="$PROJECT_DIR$/templates/users.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/utilities.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/utilities.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/utilities.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/utilities.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/variables.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/variables.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/variables.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/variables.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/variables.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/variables.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/variables.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/variables.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmdb/views.py" afterPath="$PROJECT_DIR$/cmdb/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/wells.less" afterPath="$PROJECT_DIR$/statics/lib/font-awesome/docs/assets/less/twbs-203/wells.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/wells.less" afterPath="$PROJECT_DIR$/statics/lib/lib/font-awesome/docs/assets/less/twbs-203/wells.less" />
+    <list default="true" id="6df778e3-4b8d-462e-a8e8-1136113bd058" name="Default" comment="test commit github　two">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/xebest/wsgi.py" afterPath="$PROJECT_DIR$/xebest/wsgi.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/xebest.iml" afterPath="$PROJECT_DIR$/.idea/xebest.iml" />
     </list>
     <ignored path="xebest.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -442,8 +109,8 @@
       <file leaf-file-name="a.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/a.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.3758993">
-              <caret line="55" column="1" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.794964">
+              <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -498,7 +165,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="PUSH_TAGS">
-      <GitPushTagMode />
+      <GitPushTagMode>
+        <option name="argument" value="--follow-tags" />
+        <option name="title" value="Current Branch" />
+      </GitPushTagMode>
     </option>
   </component>
   <component name="IdeDocumentHistory">
@@ -1074,7 +744,13 @@
       <option name="project" value="LOCAL" />
       <updated>1455700852677</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="test commit github　two">
+      <created>1455701583027</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1455701583027</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1198,7 +874,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="14" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="14" />
           <folding>
-            <element signature="e#63#78#0" expanded="true" />
+            <element signature="e#63#78#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1382,7 +1058,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="14" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="14" />
           <folding>
-            <element signature="e#63#78#0" expanded="true" />
+            <element signature="e#63#78#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1473,8 +1149,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/a.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3758993">
-          <caret line="55" column="1" selection-start-line="55" selection-start-column="1" selection-end-line="55" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.794964">
+          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
           <folding />
         </state>
       </provider>
