@@ -156,3 +156,27 @@ zhaobin
 sent 97 bytes  received 214 bytes  29.62 bytes/sec
 total size is 0  speedup is 0.00
 [2016-02-17 11:17:05,572][task_id:web_apps][views.py:136] [INFO]- delete bakcup id 73 path /opt/xebestv2/rootdir/backup/test1/20160217111635
+[2016-03-25 11:28:17,685][task_id:web_apps][tools.py:116] [INFO]- /usr/bin/rsync -av --password-file=/etc/rsyncd.secrets  /opt/xebestv2/rootdir/upload/test1/synctoonline/ test@192.168.26.68::xebest/release/
+[2016-03-25 11:28:22,811][task_id:web_apps][tools.py:118] [INFO]- 0
+[2016-03-25 11:28:22,811][task_id:web_apps][tools.py:119] [INFO]- sending incremental file list
+./
+zhaobin
+
+sent 96 bytes  received 37 bytes  24.18 bytes/sec
+total size is 0  speedup is 0.00
+[2016-03-25 11:28:22,881][task_id:web_apps][tools.py:116] [INFO]- /usr/bin/rsync -av --password-file=/etc/rsyncd.secrets  /opt/xebestv2/rootdir/upload/test1/synctoonline/ test@192.168.26.205::xebest/release/
+[2016-03-25 11:28:28,047][task_id:web_apps][tools.py:118] [INFO]- 0
+[2016-03-25 11:28:28,048][task_id:web_apps][tools.py:119] [INFO]- sending incremental file list
+./
+zhaobin
+
+sent 96 bytes  received 37 bytes  20.46 bytes/sec
+total size is 0  speedup is 0.00
+[2016-03-25 11:28:28,203][task_id:web_apps][tools.py:116] [INFO]- /usr/bin/rsync -av --password-file=/etc/rsyncd.secrets  /opt/xebestv2/rootdir/upload/test1/synctoonline/ test@192.168.26.202::xebest/release/
+[2016-03-25 11:28:28,512][task_id:web_apps][tools.py:118] [INFO]- 0
+[2016-03-25 11:28:28,513][task_id:web_apps][tools.py:119] [INFO]- sending incremental file list
+./
+zhaobin
+
+sent 96 bytes  received 37 bytes  266.00 bytes/sec
+total size is 0  speedup is 0.00

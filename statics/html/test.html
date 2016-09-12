@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+         <style>
+        .edit-mode{
+            background-color: #b3b3b3;
+            padding: 8px;
+            text-decoration: none;
+            color: white;
+        }
+        .editing{
+            background-color: #f0ad4e;
+        }
+    </style>
+</head>
+<body>
+    <div style="padding: 20px">
+        <input type="button" onclick="CheckAll('#edit_mode', '#tb1');" value="全选" />
+
+
+
+        <input type="button" onclick="CheckReverse('#edit_mode', '#tb1');" value="反选" />
+        <input type="button" onclick="CheckCancel('#edit_mode', '#tb1');" value="取消" />
+
+        <a id="edit_mode" class="edit-mode" href="javascript:void(0);"
+           onclick="EditMode(this, '#tb1');">进入编辑模式</a>
+
+    </div>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>选择</th>
+                <th>主机名</th>
+                <th>端口</th>
+                <th>业务</th>
+                <th class="tb1">状态</th>
+            </tr>
+        </thead>
+        <tbody id="tb1">
+            <tr>
+                <td><input type="checkbox" /></td>
+                <td edit="true">111 </td>
+                <td>v11</td>
+                <td edit="true" edit-type="select" global-key="BUSINESS"  select-val="2" >二手车</td>
+                <td edit="true" edit-type="select" global-key="STATUS"  select-val="1" >在线</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" /></td>
+                <td edit="true">v1</td>
+                <td>v11</td>
+                <td edit="true" edit-type="select" global-key="BUSINESS"  select-val="3">大保健</td>
+                <td edit="true" edit-type="select" global-key="STATUS"  select-val="1">在线</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" /></td>
+                <td edit="true">v1</td>
+                <td>v11</td>
+                <td edit="true" edit-type="select" global-key="BUSINESS" select-val="3" >大保健</td>
+                <td edit="true" edit-type="select" global-key="STATUS" select-val="2">下线</td>
+            </tr>
+        </tbody>
+    </table><script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript">
+
+        function CheckAll(mode, tb) {
+            $(tb).children().each(function(){
+                var checkbox = $(this).find(':checkbox');
+                var checkboxStatus = checkbox.prop('checked');
+                if (checkboxStatus == true) {
+                } else {
+                    checkbox.prop('checked',true);
+                };
+            });
+        }
+
+
+        function CheckCancel(mode, tb) {
+            $(tb).children().each(function(){
+                var checkbox = $(this).find(':checkbox');
+                var checkboxStatus = checkbox.prop('checked');
+                if (checkboxStatus == true) {
+                    checkbox.prop('checked',false);
+                } else {
+                };
+            });
+        }
+
+
+        function CheckReverse(mode, tb) {
+            $(tb).children().each(function(){
+                var checkbox = $(this).find(':checkbox');
+                var checkboxStatus = checkbox.prop('checked');
+                if (checkboxStatus == true) {
+                    checkbox.prop('checked',false);
+                } else {
+                    checkbox.prop('checked',true);
+                };
+            });
+        }</script>
+</body>
+</html>
