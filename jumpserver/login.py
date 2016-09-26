@@ -241,6 +241,7 @@ class SshTty(Tty):
                         if match:
                             if self.vim_flag or len(match) == 2:
                                 self.vim_flag = False
+                                self.main_obj.deal_audit_log(data,self.server_obj)
                             else:
                                 self.vim_flag = True
                         elif not self.vim_flag:
